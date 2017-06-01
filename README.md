@@ -43,5 +43,8 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 ## Bazy Danych
 
+do opracowania
+https://github.com/tvandame/back-end-developer-interview-questions
+
 
 author @brzydal
