@@ -24,6 +24,10 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     - Wątki wymagają mniej zasobów do działania i też mniejszy jest czas ich tworzenia.
     - Dzięki współdzieleniu przestrzeni adresowej (pamięci) wątki jednego zadania mogą się między sobą komunikować w bardzo łatwy sposób, niewymagający pomocy ze strony systemu operacyjnego. Przekazanie dowolnie dużej ilości danych wymaga przesłania jedynie wskaźnika, zaś odczyt (a niekiedy zapis) danych o rozmiarze nie większym od słowa maszynowego nie wymaga synchronizacji (procesor gwarantuje atomowość takiej operacji).
 
+### 2. Jak działa Internet?
+https://www.youtube.com/watch?v=7_LPdttKXPc
+http://kobietydokodu.pl/niezbednik-juniora-jak-dziala-internet/
+
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
