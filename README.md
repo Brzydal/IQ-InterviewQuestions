@@ -59,12 +59,17 @@ Wzorzec projektowy (ang. design pattern) – uniwersalne, sprawdzone w praktyce 
 np. https://pl.wikipedia.org/wiki/Model-View-Controller
 Model-View-Controller (pol. Model-Widok-Kontroler) – wzorzec architektoniczny służący do organizowania struktury aplikacji posiadających graficzne interfejsy użytkownika[1]. Wiele prac traktuje go jako pojedynczy wzorzec, lecz może on być także traktowany jako złożony wzorzec wykorzystujący idee wzorców prostych, takich jak Obserwator, Strategia czy Kompozyt. Oba te podejścia nie wykluczają się[1]. MVC nie był traktowany jako samodzielny wzorzec również w pracy „Design Patterns: Elements of Reusable Object-Oriented Software“ autorstwa „Bandy Czworga”[2].
 
-
 Model-View-Controller zakłada podział aplikacji na trzy główne części:
 - Model – jest pewną reprezentacją problemu bądź logiki aplikacji.
 - Widok – opisuje, jak wyświetlić pewną część modelu w ramach interfejsu użytkownika. Może składać się z podwidoków odpowiedzialnych za mniejsze części interfejsu.
 - Kontroler – przyjmuje dane wejściowe od użytkownika i reaguje na jego poczynania, zarządzając aktualizacje modelu oraz odświeżenie widoków.
 
+### 5. Co to jest ORM?
+https://en.wikipedia.org/wiki/Object-relational_mapping
+
+Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping ORM) – sposób odwzorowania obiektowej architektury systemu informatycznego na bazę danych (lub inny element systemu) o relacyjnym charakterze.
+
+Implementacja takiego odwzorowania stosowana jest między innymi w przypadku, gdy tworzony system oparty jest na podejściu obiektowym, a system bazy danych operuje na relacjach. Z ORM związany jest szereg problemów wydajnościowych.
 
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
