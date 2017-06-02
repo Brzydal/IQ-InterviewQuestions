@@ -28,6 +28,14 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 https://www.youtube.com/watch?v=7_LPdttKXPc
 http://kobietydokodu.pl/niezbednik-juniora-jak-dziala-internet/
 
+Internet - to połączone ze sobą tysiące sieci działające według odmiennych standardów, które dzięki temu, że potrafią „rozmawiać” ze sobą we „wspólnym języku” (protokole internetowym), potrafią przesłać dane z punktu A w dowolnej z tych sieci do punktu B w dowolnej z tych sieci.
+- Internet jest siecią złożoną z tysięcy oddzielnych sieci połączonych za sobą.
+- Wspólne  dla  nich  wszystkich  jest  używania  jednego  języka  –  protokołu  internetowego (TCP/IP).
+- Internet  jest  metasiecią  –  służy  do  przesyłania  pakietów  IP  wykorzystując  do  tego  celu różnorodne sieci znajdujące się „pod” Internetem.
+- Sieć  jest  „głupia”  –  zajmuje  się  przesyłaniem  pakietów,  dzięki  czemu  robi  to  szybko i efektywnie.
+- „Mądrość”  i  zaawansowane  funkcje  zlokalizowane  są  w urządzeniach  końcowych (komputery, serwery itp.) i aplikacjach na nich uruchamianych. Dzięki schematowi „głupia sieć – mądre urządzenie końcowe”, czyli zasadzie
+end-to-end, Internet jest otwartą platformą dla innowacji, nowych aplikacji i zastosowań.
+
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
