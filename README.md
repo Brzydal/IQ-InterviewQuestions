@@ -94,7 +94,7 @@ https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/
 Identyfikator *args jest używany, gdy nie jesteśmy pewni, jak wiele argumentów zostanie przekazanych do funkcji, lub jeśli chcemy przekazać listę lub krotkę argumentów do funkcji. Identyfikator ** kwargs jest używany, gdy nie wiemy, jak wiele nazwanych argumentów zostanie przekazanych do funkcji . Może być również użyty do przekazywania wartości słownika. Identyfikatory args i kwargs są konwencją, można również użyć * bob i ** billy, ale to nie byłoby mądre.
 
 np.
-
+```python
     def f(*args,**kwargs): print(args, kwargs)
 
     l = [1,2,3]
@@ -127,8 +127,11 @@ np.
     f2(1,2,*t)                   # 1 2 (4, 5, 6) {}
     f2(1,1,q="winning",**d)      # 1 1 () {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
     f2(1,2,*t,q="winning",**d)   # 1 2 (4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
+```
 
 ### 3. Co to są dekoratory?
+http://blog.heintze.pl/tag/dekorator/
+
 Dekoratory sa to specjalne funkcje, które jako argument przyjmują inna funkcję i zwracają funkcję lub jako argument przyjmują klasę i zwracają klasę.
 ```python
 @my_decorator
@@ -147,6 +150,11 @@ Przykłady dekoratorów:
 - @classmethod,
 - @staticmethod,
 - @property
+
+### 4. Co to jest PEP8?
+https://www.python.org/dev/peps/pep-0008/
+
+PEP8 jest to zestaw zasad określających jak ma wyglądać kod Pythona. Określa między innymi jak duże mają być wcięcia, jak pisać komentarze, maksymalną ilość znaków w jednej linii itp.
 
 ## Bazy Danych
 ### 1. Jak i kiedy stosować indeksy w bazach danych?
