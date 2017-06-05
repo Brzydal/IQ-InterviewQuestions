@@ -156,6 +156,23 @@ https://www.python.org/dev/peps/pep-0008/
 
 PEP8 jest to zestaw zasad określających jak ma wyglądać kod Pythona. Określa między innymi jak duże mają być wcięcia, jak pisać komentarze, maksymalną ilość znaków w jednej linii itp.
 
+### 5. Jakie znasz typy danych w Pythonie?
+https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
+
+|   Typ     | 	Opis        | 	Przykład    |
+|-----------|---------------|---------------|
+|str        |Napis          | 'Python'      |
+|list       |Lista (zmienna, zawartość, długość)|[4.0, 'string', True]|
+|tuple 	    |Krotka (niezmienna)|(4.0, 'string', True)|
+|set        |Zbiór różnych elementów (zmienny)| {4.0, 'string', True}|
+|frozenset 	|Zbiór różnych elementów (niezmienny)|frozenset({4.0, 'string', True})|
+|dict       |Słownik, czyli tablica asocjacyjna (zmienny)|	{'key1': 1.0, 3: False}|
+|int     	|Liczba całkowita o dowolnej wartości| 	42|
+|float 	    |Liczba zmiennoprzecinkowa 	|3.1415927|
+|complex 	|Liczba zespolona 	|3+2.7j|
+|bool 	    |Prawda lub fałsz 	|True False|
+|type(None) |Nic (odpowiednik null) 	|None|
+
 ## Bazy Danych
 ### 1. Jak i kiedy stosować indeksy w bazach danych?
 https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-i-jak-je-stosowac.aspx
