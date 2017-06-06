@@ -173,6 +173,30 @@ https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
 |bool 	    |Prawda lub fałsz 	|True False|
 |type(None) |Nic (odpowiednik null) 	|None|
 
+### 6. Co to znaczy, że jedne zmienne są mutable, a inne immutable?
+https://codehabitude.com/2013/12/24/python-objects-mutable-vs-immutable/
+
+Nie wszystkie typy zmiennych w Pythonie reagują tak samo na zmiany. Jedne typy są mutable, czyli zmienne, a inne immutable, czyli niezmienne i zwracają raczej nowy obiekt tego samego typu, ale same pozostają takie same.
+
+Obiekty niezmienne:
+    - int
+    - float
+    - decimal
+    - complex
+    - bool
+    - string
+    - tuple
+    - range
+    - frozenset
+    - bytes
+
+Obiekty zmienne:
+    - list
+    - dict
+    - set
+    - bytearray
+
+
 ## Bazy Danych
 ### 1. Jak i kiedy stosować indeksy w bazach danych?
 https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-i-jak-je-stosowac.aspx
