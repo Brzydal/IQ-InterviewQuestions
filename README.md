@@ -71,6 +71,17 @@ Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping ORM) – sposób o
 
 Implementacja takiego odwzorowania stosowana jest między innymi w przypadku, gdy tworzony system oparty jest na podejściu obiektowym, a system bazy danych operuje na relacjach. Z ORM związany jest szereg problemów wydajnościowych.
 
+### 6. Co to są wyrażenia regularne?
+http://grabun.pl/wyrazenia-regularne/
+
+Za pomocą wyrażeń regularnych (ang. regular expressions albo w skrócie regexp) można opisywać pewne skomplikowane wzorce wyszukiwania na przykład treści dokumentów.
+
+>Przykładowo, za pomocą wzorca:
+```
+[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,4}
+```
+można próbować sprawdzać poprawność wpisanego w formularz adresu e-mail.
+
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
@@ -191,6 +202,10 @@ Obiekty niezmienne:
     - bytes
 
 Obiekty zmienne:
+Markdown
+Toggle Zen Mode
+Preview
+
     - list
     - dict
     - set
