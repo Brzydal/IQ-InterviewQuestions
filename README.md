@@ -228,7 +228,7 @@ https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-
 
 - Różnica - wyobraźmy sobie zapytanie, które ma wybrać dane z 15 tabel, z których największa ma np. milion rekordów. Przypuszczam, że operacja wyszukiwania będzie trwała ok. 5 minut. Po założeniu indeksu na tej największej tabeli czas wykonywania zapytania może się skrócić nawet o 10 razy.
 
-## 4. Internet
+## Internet
 
 ### 1. Jak działa Internet?
 https://www.youtube.com/watch?v=7_LPdttKXPc
@@ -264,6 +264,13 @@ Poniżej wyszczególniono niektóre, popularne protokoły komunikacyjne wraz z n
 - IMAP - 143
 
 Osobną klasą protokołów komunikacyjnych są protokoły do komunikacji grupowej (multicast), używane m.in. do transmisji telewizyjnych przez Internet, telekonferencji itp. Przykładami takich protokołów są RMTP (Reliable Multicast Transport Protocol), TOTEM, XTP, Muse i inne.
+
+### 3. Co to jest DNS?
+https://pl.wikipedia.org/wiki/Domain_Name_System
+
+Domain Name System (DNS, pol. „system nazw domenowych”) – system serwerów, protokół komunikacyjny oraz usługa obsługująca rozproszoną bazę danych adresów sieciowych. Pozwala na zamianę adresów znanych użytkowników Internetu na adresy zrozumiałe dla urządzeń tworzących sieć komputerową. Dzięki DNS nazwa mnemoniczna, np. pl.wikipedia.org jest tłumaczona na odpowiadający jej adres IP, czyli 91.198.174.192.
+
+DNS to złożony system komputerowy oraz prawny. Zapewnia z jednej strony rejestrację nazw domen internetowych i ich powiązanie z numerami IP. Z drugiej strony realizuje bieżącą obsługę komputerów odnajdujących adresy IP odpowiadające poszczególnym nazwom. Jest nieodzowny do działania prawie wszystkich usług sieci Internet.
 
 
 do opracowania
