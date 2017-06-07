@@ -200,6 +200,17 @@ Preview
     - set
     - bytearray
 
+### 7. Dlaczego i kiedy używać generatorów w Pythonie?
+https://wiki.python.org/moin/Generators
+
+Generator w Pythonie jest funkcją, która zwraca iterowalny obiekt. Możemy iterować po tym obiekcie za pomocą słowa kluczowego <yield>. Ale możemy to zrobić tylko raz, ponieważ wartości zwracane przezgenerator nie są trzymane w pamięci, ale są tworzone w locie i zapominane.
+
+ Oto kilka przykładów, w których korzystanie z generatorów jest korzystne:
+
+- Możemy zastąpić pętle generatorami w celu wydajnego obliczania wyników z użyciem dużych zbiorów danych.
+- Generatory są użyteczne, gdy nie chcemy otrzymać wszystkich wyników i kiedy chcemy wstrzymać iterację na jakiś czas.
+- Zamiast używać funkcji callback możemy zastąpić ją generatorem. Możemy napisać pętlę wewnątrz funkcji robi to samo co wywołanie zwrotne i przekształca ją w generator.
+
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
