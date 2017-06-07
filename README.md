@@ -6,6 +6,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 1. [Pytania Ogólne](#pytania-ogólne)
 2. [Python](#python)
 3. [Bazy Danych](#bazy-danych)
+4. [Internet](#internet)
 
 ## Pytania Ogólne:
 
@@ -24,19 +25,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     - Wątki wymagają mniej zasobów do działania i też mniejszy jest czas ich tworzenia.
     - Dzięki współdzieleniu przestrzeni adresowej (pamięci) wątki jednego zadania mogą się między sobą komunikować w bardzo łatwy sposób, niewymagający pomocy ze strony systemu operacyjnego. Przekazanie dowolnie dużej ilości danych wymaga przesłania jedynie wskaźnika, zaś odczyt (a niekiedy zapis) danych o rozmiarze nie większym od słowa maszynowego nie wymaga synchronizacji (procesor gwarantuje atomowość takiej operacji).
 
-### 2. Jak działa Internet?
-https://www.youtube.com/watch?v=7_LPdttKXPc
-http://kobietydokodu.pl/niezbednik-juniora-jak-dziala-internet/
-
-Internet - to połączone ze sobą tysiące sieci działające według odmiennych standardów, które dzięki temu, że potrafią „rozmawiać” ze sobą we „wspólnym języku” (protokole internetowym), potrafią przesłać dane z punktu A w dowolnej z tych sieci do punktu B w dowolnej z tych sieci.
-- Internet jest siecią złożoną z tysięcy oddzielnych sieci połączonych za sobą.
-- Wspólne  dla  nich  wszystkich  jest  używania  jednego  języka  –  protokołu  internetowego (TCP/IP).
-- Internet  jest  metasiecią  –  służy  do  przesyłania  pakietów  IP  wykorzystując  do  tego  celu różnorodne sieci znajdujące się „pod” Internetem.
-- Sieć  jest  „głupia”  –  zajmuje  się  przesyłaniem  pakietów,  dzięki  czemu  robi  to  szybko i efektywnie.
-- „Mądrość”  i  zaawansowane  funkcje  zlokalizowane  są  w urządzeniach  końcowych (komputery, serwery itp.) i aplikacjach na nich uruchamianych. Dzięki schematowi „głupia sieć – mądre urządzenie końcowe”, czyli zasadzie
-end-to-end, Internet jest otwartą platformą dla innowacji, nowych aplikacji i zastosowań.
-
-### 3. Co to jest projektowanie obiektowe?
+### 2. Co to jest projektowanie obiektowe?
 https://pl.wikipedia.org/wiki/Programowanie_obiektowe
 
 Programowanie obiektowe (ang. object-oriented programming) – paradygmat programowania, w którym programy definiuje się za pomocą obiektów – elementów łączących stan (czyli dane, nazywane najczęściej polami) i zachowanie (czyli procedury, tu: metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań. Podejście to różni się od tradycyjnego programowania proceduralnego, gdzie dane i procedury nie są ze sobą bezpośrednio związane. Programowanie obiektowe ma ułatwić pisanie, konserwację i wielokrotne użycie programów lub ich fragmentów. Największym atutem programowania, projektowania oraz analizy obiektowej jest zgodność takiego podejścia z rzeczywistością – mózg ludzki jest w naturalny sposób najlepiej przystosowany do takiego podejścia przy przetwarzaniu informacji.
@@ -51,7 +40,7 @@ Podstawowe założenia paradygmatu obiektowego:
 
  - Dziedziczenie - porządkuje i wspomaga polimorfizm i enkapsulację dzięki umożliwieniu definiowania i tworzenia specjalizowanych obiektów na podstawie bardziej ogólnych. Dla obiektów specjalizowanych nie trzeba redefiniować całej funkcjonalności, lecz tylko tę, której nie ma obiekt ogólniejszy. W typowym przypadku powstają grupy obiektów zwane klasami, oraz grupy klas zwane drzewami. Odzwierciedlają one wspólne cechy obiektów.
 
-### 4. Co to jest wzorzec projektowy?
+### 3. Co to jest wzorzec projektowy?
 https://pl.wikipedia.org/wiki/Wzorzec_projektowy_(informatyka)
 
 Wzorzec projektowy (ang. design pattern) – uniwersalne, sprawdzone w praktyce rozwiązanie często pojawiających się, powtarzalnych problemów projektowych. Pokazuje powiązania i zależności pomiędzy klasami oraz obiektami i ułatwia tworzenie, modyfikację oraz pielęgnację kodu źródłowego. Jest opisem rozwiązania, a nie jego implementacją. Wzorce projektowe stosowane są w projektach wykorzystujących programowanie obiektowe.
@@ -64,7 +53,7 @@ Model-View-Controller zakłada podział aplikacji na trzy główne części:
 - Widok – opisuje, jak wyświetlić pewną część modelu w ramach interfejsu użytkownika. Może składać się z podwidoków odpowiedzialnych za mniejsze części interfejsu.
 - Kontroler – przyjmuje dane wejściowe od użytkownika i reaguje na jego poczynania, zarządzając aktualizacje modelu oraz odświeżenie widoków.
 
-### 5. Co to jest ORM?
+### 4. Co to jest ORM?
 https://en.wikipedia.org/wiki/Object-relational_mapping
 
 Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping ORM) – sposób odwzorowania obiektowej architektury systemu informatycznego na bazę danych (lub inny element systemu) o relacyjnym charakterze.
@@ -238,6 +227,43 @@ https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-
 - Strata - niestety, nie do końca. To dlatego, że ceną za udogodnienia, jakie oferuje nam indeks, jest zwiększenie rozmiarów bazy, gdyż indeks również potrzebuje trochę miejsca. Przestrzeń dyskowa jest z kolei kluczowym aspektem podczas projektowania bazy danych. A zatem już na początku została obalona postawiona teza o popieraniu rozrzutności podczas indeksowania danych. Należy się zastanowić, na których polach indeks będzie nam potrzebny, a na których jest zwyczajnie zbędny. W tym momencie pomocne będzie środowisko SQL Server, które udzieli nam diagnostycznej informacji o wykonywaniu zapytania, na podstawie której przekonamy się, czy wykorzystał on nasze indeksy. Wystarczy zapytanie SELECT poprzedzić słowem EXPLAIN, a odpowiedź na nasze pytanie mamy gotową.
 
 - Różnica - wyobraźmy sobie zapytanie, które ma wybrać dane z 15 tabel, z których największa ma np. milion rekordów. Przypuszczam, że operacja wyszukiwania będzie trwała ok. 5 minut. Po założeniu indeksu na tej największej tabeli czas wykonywania zapytania może się skrócić nawet o 10 razy.
+
+## 4. Internet
+
+### 1. Jak działa Internet?
+https://www.youtube.com/watch?v=7_LPdttKXPc
+http://kobietydokodu.pl/niezbednik-juniora-jak-dziala-internet/
+
+Internet - to połączone ze sobą tysiące sieci działające według odmiennych standardów, które dzięki temu, że potrafią „rozmawiać” ze sobą we „wspólnym języku” (protokole internetowym), potrafią przesłać dane z punktu A w dowolnej z tych sieci do punktu B w dowolnej z tych sieci.
+- Internet jest siecią złożoną z tysięcy oddzielnych sieci połączonych za sobą.
+- Wspólne  dla  nich  wszystkich  jest  używania  jednego  języka  –  protokołu  internetowego (TCP/IP).
+- Internet  jest  metasiecią  –  służy  do  przesyłania  pakietów  IP  wykorzystując  do  tego  celu różnorodne sieci znajdujące się „pod” Internetem.
+- Sieć  jest  „głupia”  –  zajmuje  się  przesyłaniem  pakietów,  dzięki  czemu  robi  to  szybko i efektywnie.
+- „Mądrość”  i  zaawansowane  funkcje  zlokalizowane  są  w urządzeniach  końcowych (komputery, serwery itp.) i aplikacjach na nich uruchamianych. Dzięki schematowi „głupia sieć – mądre urządzenie końcowe”, czyli zasadzie
+end-to-end, Internet jest otwartą platformą dla innowacji, nowych aplikacji i zastosowań.
+
+### 2. Jakie znasz protokoły internetowe?
+https://pl.wikipedia.org/wiki/Protok%C3%B3%C5%82_komunikacyjny#Protoko.C5.82y_internetowe
+
+Protokoły służące programom komputerowym do porozumiewania się między sobą poprzez Internet są określone przez IETF w dokumentach zwanych RFC.
+
+Przesyłanie danych komputerowych to niezwykle trudny proces, dlatego rozdzielono go na kilka "etapów", warstw. Warstwy oznaczają w istocie poszczególne funkcje spełniane przez sieć. Najbardziej powszechny sposób organizacji warstw komunikacji sieciowej to Model OSI.
+
+Poniżej wyszczególniono niektóre, popularne protokoły komunikacyjne wraz z numerem portu:
+- DNS – 53
+- FTP – 21
+- HTTP – 80 (HTTP Proxy używa zwykle portu 8080)
+- HTTPS – 443 (HTTP na SSL)
+- IRC – 6667
+- NNTP – 119
+- POP3 – 110
+- SPOP3 – 995 (POP3 na SSL)
+- SMTP – 25
+- SSH – 22
+- Telnet – 23
+- IMAP - 143
+
+Osobną klasą protokołów komunikacyjnych są protokoły do komunikacji grupowej (multicast), używane m.in. do transmisji telewizyjnych przez Internet, telekonferencji itp. Przykładami takich protokołów są RMTP (Reliable Multicast Transport Protocol), TOTEM, XTP, Muse i inne.
 
 
 do opracowania
