@@ -239,6 +239,26 @@ https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-
 
 - Różnica - wyobraźmy sobie zapytanie, które ma wybrać dane z 15 tabel, z których największa ma np. milion rekordów. Przypuszczam, że operacja wyszukiwania będzie trwała ok. 5 minut. Po założeniu indeksu na tej największej tabeli czas wykonywania zapytania może się skrócić nawet o 10 razy.
 
+### 3. Jaka jest różnica między widokiem (View), a tabelą (Table)?
+https://pl.wikipedia.org/wiki/Widok_(bazy_danych)
+https://pl.wikipedia.org/wiki/Tabela_(bazy_danych)
+
+Widok (perspektywa) to logiczny byt (obiekt), osadzony na serwerze baz danych. Umożliwia dostęp do podzbioru kolumn i wierszy tabel lub tabeli na podstawie zapytania w języku SQL, które stanowi część definicji tego obiektu. Przy korzystaniu z widoku jako źródła danych należy odwoływać się identycznie jak do tabeli. Operacje wstawiania, modyfikowania oraz usuwania rekordów nie zawsze są możliwe ( np. w sytuacji gdy widok udostępnia część kolumn dwóch tabel tb_A oraz tb_B bez kolumny z kluczem głównym tabeli tb_B ). W niektórych SZBD widok służy wyłącznie do pobierania wyników i ograniczania dostępu do danych.
+
+Składnia SQL do utworzenia widoku:
+    ```
+    CREATE VIEW nazwa_widoku [(kolumna1, kolumna2,  ..., kolumnaN )]
+    AS
+    SELECT ...;
+    ```
+Składnia SQL do pobrania danych z widoku:
+    ```
+    SELECT * FROM nazwa_widoku;
+    ```
+Tabela (relacja) – wydzielony logicznie zbiór danych, zorganizowanych w formie tabeli składającej się z wierszy dzielonych na kolumny. Jest to obiekt teoretyczny i nie należy go mylić z jej graficzną reprezentacją, czy miejscem zajmowanym w pamięci komputera. W zależności od typu bazy danych wewnętrzna organizacja podziału danych na kolumny i wiersze jest różna i często umowna.
+
+Pojedyncza tabela może być reprezentacją pewnej encji (np. książek, mieszkań, ludzi), relacji między nimi, albo może stanowić zawartość całej bazy danych. Pojedynczy wiersz tabeli nazywany jest rekordem i stanowi najczęściej zbiór danych o pojedynczym obiekcie (ew. grupie obiektów).
+
 ## Internet
 
 ### 1. Jak działa Internet?
