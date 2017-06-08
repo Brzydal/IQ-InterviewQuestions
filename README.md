@@ -268,7 +268,7 @@ http://www.teacher.webd.pl/kurs_mysql/k_2_2_3.php
  -  #### Relacja jeden do wielu
     Relacja jeden do wielu jest najczęściej używanym typem połączenia. Pomiędzy tabelami A i B występuje wtedy, gdy pojedynczemu rekordowi z tabeli A jest przyporządkowany jeden lub wiele rekordów z tabeli B, natomiast pojedynczemu rekordowi z tabeli B jest przyporządkowany dokładnie jeden rekord z tabeli A. Zmodyfikujmny wcześniejszy przykład, zmieniając tabelę przewodniczących klas na tabelę wychowawców. Może niektórzy nie znają takich sytuacji, więc wyjaśniam, że w mojej szkole funkcjonują klasy łączone. Dwie klasy mają oddzielną domunentację (np. dzienniki lekcyjne), ale jednego wychowawcę.
 
- -  #### Relacja wiele do wielu 
+ -  #### Relacja wiele do wielu
     Relacja wiele do wielu pomiędzy tabelami A i B występuje wtedy, gdy pojedynczemu rekordowi z tabeli A jest przyporządkowany jeden lub wielu rekordów z tabeli B, i na odwrót - pojedynczemu rekordowi z tabeli B jest przyporządkowany jeden lub wielu rekordów A. Taką sytuację będziemy mieli w realcji nauczycieli do uczniów. Każdy nauczyciel uczy wielu uczniów, natomiast każdego ucznia uczą różni nauczyciele.
 
 ## Internet
@@ -314,6 +314,25 @@ https://pl.wikipedia.org/wiki/Domain_Name_System
 Domain Name System (DNS, pol. „system nazw domenowych”) – system serwerów, protokół komunikacyjny oraz usługa obsługująca rozproszoną bazę danych adresów sieciowych. Pozwala na zamianę adresów znanych użytkowników Internetu na adresy zrozumiałe dla urządzeń tworzących sieć komputerową. Dzięki DNS nazwa mnemoniczna, np. pl.wikipedia.org jest tłumaczona na odpowiadający jej adres IP, czyli 91.198.174.192.
 
 DNS to złożony system komputerowy oraz prawny. Zapewnia z jednej strony rejestrację nazw domen internetowych i ich powiązanie z numerami IP. Z drugiej strony realizuje bieżącą obsługę komputerów odnajdujących adresy IP odpowiadające poszczególnym nazwom. Jest nieodzowny do działania prawie wszystkich usług sieci Internet.
+
+### 4. Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres?
+https://youtu.be/M2wvvLmRkwo
+http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
+
+To pytanie ma drugie dno – poza tym, że jest pewnego rodzaju podsumowaniem powyższych informacji, pada ono bardzo często na rozmowach rekrutacyjnych :) Zacznijmy więc od początku.
+
+Pierwsze co się wydarzy to przeglądarka spróbuje przetłumaczyć adres url (www.kobietydokodu.pl) na adres IP (np. 188.128.171.252) . Aby to zrobić, najpierw sprawdzana jest pamęć podręczna. Tam przeglądarka (lub system operacyjny) przechowuje m.in. ostatnie wyniki takiego tłumaczenia. Jeśli nie znajdzie go w pamięci podręcznej, wysyła zapytanie do serwera DNS. Serwery DNS służą właśnie do tego, aby tłumaczyć nazwy domen na adresy IP. Po otrzymaniu odpowiedzi przeglądarka zna już adres IP (czyli adres serwera w sieci) pod jaki ma wysłać zapytania.
+
+Drugim krokiem jest wysłanie zapytania do serwera działającego pod wskazanym adresem. Zapytanie to wysyłane jest na port 80 (jest to domyślny port protokołu HTTP) i jest to zapytanie typu GET. Serwer przetwarza zapytanie i jeśli wszystko jest w porządku odpowiada treścią (np.  stroną HTML) oraz statusem 200 – OK.
+
+Jeśli chodzi o to, co dzieje się po stronie serwera, to zależy od użytej technologii. My przeanalizujemy oczywiście serwer aplikacji Java EE.
+
+Wstępem jest zamiana zapytania HTTP na obiekt typu HttpServletRequest. Dopiero wtedy ma miejsce właściwe przetwarzanie.
+Na początku serwer aplikacji analizuje adres URI – bierze jego pierwszy segment (do pierwszego /) weryfikując, czy istnieje aplikacja uruchomiona pod takim adresem. Jeśli tak, ta część jest usuwana z adresu URI, a zapytanie jest przekazywane do tej aplikacji, jeśli nie to zapytanie jest kierowane do aplikacji o ścieżce / (jeśli oczywiście istnieje). Następnie serwer aplikacji na podstawie informacji z pliku XML kieruje zapytanie do odpowiedniego obiektu, który implementuje interfejs Servlet. Tutaj już przychodzi czas na naszą aplikację – Servlety to obiekty, których implementacja jest częścią aplikacji.
+
+W przypadku aplikacji napisanych z użyciem Spring’a, wszystkie zapytania (najczęściej) trafiają do jednego obiektu typu DispatcherServlet, który na podstawie adnotacji nad kontrolerami, plików konfiguracji oraz plików XML wywołuje metody odpowiednich klas.
+
+To trochę uproszczony obraz, w grę wchodzą jeszcze filtry, intrceptory, potencjalnie mogą też aspekty, jednak nie zmieniają one idei i dokładniejszym ich omówieniem zajmiemy się przy innej okazji.
 
 
 do opracowania
