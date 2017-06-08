@@ -259,6 +259,18 @@ Tabela (relacja) – wydzielony logicznie zbiór danych, zorganizowanych w formi
 
 Pojedyncza tabela może być reprezentacją pewnej encji (np. książek, mieszkań, ludzi), relacji między nimi, albo może stanowić zawartość całej bazy danych. Pojedynczy wiersz tabeli nazywany jest rekordem i stanowi najczęściej zbiór danych o pojedynczym obiekcie (ew. grupie obiektów).
 
+### 4. Jakie znasz relacje w bazach danych
+http://www.teacher.webd.pl/kurs_mysql/k_2_2_3.php
+
+ -  #### Relacja jeden do jednego
+    Relacja jeden do jednego pomiędzy tabelami A i B występuje wtedy, gdy każdemu rekordowi z tabeli A jest przyporządkowany dokładnie jeden rekord z tabeli B i na odwrót – każdemu rekordowi z tabeli B jest przyporządkowany dokładnie jeden rekord z tabeli A.
+
+ -  #### Relacja jeden do wielu
+    Relacja jeden do wielu jest najczęściej używanym typem połączenia. Pomiędzy tabelami A i B występuje wtedy, gdy pojedynczemu rekordowi z tabeli A jest przyporządkowany jeden lub wiele rekordów z tabeli B, natomiast pojedynczemu rekordowi z tabeli B jest przyporządkowany dokładnie jeden rekord z tabeli A. Zmodyfikujmny wcześniejszy przykład, zmieniając tabelę przewodniczących klas na tabelę wychowawców. Może niektórzy nie znają takich sytuacji, więc wyjaśniam, że w mojej szkole funkcjonują klasy łączone. Dwie klasy mają oddzielną domunentację (np. dzienniki lekcyjne), ale jednego wychowawcę.
+
+ -  #### Relacja wiele do wielu 
+    Relacja wiele do wielu pomiędzy tabelami A i B występuje wtedy, gdy pojedynczemu rekordowi z tabeli A jest przyporządkowany jeden lub wielu rekordów z tabeli B, i na odwrót - pojedynczemu rekordowi z tabeli B jest przyporządkowany jeden lub wielu rekordów A. Taką sytuację będziemy mieli w realcji nauczycieli do uczniów. Każdy nauczyciel uczy wielu uczniów, natomiast każdego ucznia uczą różni nauczyciele.
+
 ## Internet
 
 ### 1. Jak działa Internet?
