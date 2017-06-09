@@ -334,6 +334,39 @@ W przypadku aplikacji napisanych z użyciem Spring’a, wszystkie zapytania (naj
 
 To trochę uproszczony obraz, w grę wchodzą jeszcze filtry, intrceptory, potencjalnie mogą też aspekty, jednak nie zmieniają one idei i dokładniejszym ich omówieniem zajmiemy się przy innej okazji.
 
+### 5. Co to jest model OSI i jakie ma warstwy?
+http://egzamin-e13.pl/projektowanie-lokalnych-sieci-komputerowych-2/warstwy-sieci-komputerowych-model-osi-i-tcpip
+
+Model wzorcowy ISO OSI (angielskie Open System Interconnection Reference Model), jest kompleksowy standard komunikacji sieciowej (ISO 7498). Proces komunikacji wg tego modelu został podzielony na 7 etapów, zwanych warstwami, ze względu na sposób przechodzenia informacji pomiędzy nimi. Według modelu OSI każdy protokół komunikuje się ze swoim odpowiednikiem, będącym implementacją tego samego protokołu w równorzędnej warstwie komunikacyjnej systemu odległego. Dane przekazywane są od wierzchołka stosu, poprzez kolejne warstwy, aż do warstwy fizycznej, która przesyła je poprzez sieć do odległego hosta.
+
+#### Warstwa fizyczna
+
+Zapewnia transmisję danych pomiędzy węzłami sieci. Definiuje interfejsy sieciowe i medium transmisji. Określa m.in. sposób połączenia mechanicznego, elektrycznego, standard fizycznej transmisji danych. W skład jej obiektów wchodzą min.: przewody, karty sieciowe, modemy, wzmacniacze, koncentratory.
+
+#### Warstwa łącza danych
+
+Zapewnia niezawodność łącza danych. Definiuje mechanizmy kontroli błędów w przesyłanych ramkach lub pakietach - CRC (Cyclic Redundancy Check). Jest ona ściśle powiązana z warstwą fizyczną, która narzuca topologię. Warstwa ta często zajmuje się również kompresją danych. W skład jej obiektów wchodzą sterowniki urządzeń sieciowych, np.: sterowniki kart sieciowych oraz mosty i przełączniki.
+
+#### Warstwa sieciowa
+
+Zapewnia metody ustanawiania, utrzymywania i rozłączania połączenia sieciowego. Obsługuje błędy komunikacji. Ponadto jest odpowiedzialna za trasowanie pakietów w sieci, czyli wyznaczenie optymalnej trasy dla połączenia. W niektórych warunkach dopuszczalne jest gubienie pakietów przez tę warstwę. W skład jej obiektów wchodzą min.: rutery.
+
+#### Warstwa transportowa
+
+Zapewnia przezroczysty transfer danych typu point-to-point. Dba o kolejność pakietów otrzymywanych przez odbiorcę. Sprawdza poprawność przesyłanych pakietów i w przypadku ich uszkodzenia lub zaginięcia, zapewnia ich retransmisję.
+
+#### Warstwa sesji
+
+Zapewnia aplikacjom na odległych komputerach realizację wymiany danych pomiędzy nimi. Kontroluje nawiązywanie i zrywanie połączenia przez aplikację. Jest odpowiedzialna za poprawną realizację zapytania o daną usługę. Do warstwy tej można zaliczyć funkcje API udostępniane programiście przez bibliotekę realizującą dostęp do sieci na poziomie powyżej warstwy transportowej takie jak np. biblioteka strumieni i gniazdek BSD.
+
+#### Warstwa prezentacji
+
+Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składnię. Umożliwia przekształcenie danych na postać standardową, niezależną od aplikacji. Rozwiązuje takie problemy jak niezgodność reprezentacji liczb, znaków końca wiersza, liter narodowych itp. Odpowiada także za kompresję i szyfrowanie.
+
+#### Warstwa aplikacji
+
+Zapewnia aplikacjom metody dostępu do środowiska OSI. Warstwa ta świadczy usługi końcowe dla aplikacji, min.: udostępnianie zasobów (plików, drukarek). Na tym poziomie rezydują procesy sieciowe dostępne bezpośrednio dla użytkownika.
+
 
 do opracowania
 https://github.com/tvandame/back-end-developer-interview-questions
