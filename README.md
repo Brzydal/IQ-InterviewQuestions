@@ -403,6 +403,37 @@ Poniższa tabela podsumowuje najczęściej używane nagłówki
 |Host 	|W zapytaniu jest to nagłówek obowiązkowy, informuje serwer pod jaki adres domeny chcemy wysłać zapytanie (może to być też adres IP). Pomaga to serwerom obsługującym wiele domen prawidłowo przekierowywać zapytania |	Host: www.kobietydokodu.pl
 |Accept 	|W zapytaniu klient może poinformować serwer, jakiego typu odpowiedzi akceptuje. Dzięki temu serwer może zadecydować o wysłaniu odpowiedzi np. w XML a nie JSON, co ma zastosowanie w wielu API 	|Accept: application/xml
 
+### 7. Czym różni się Http od Https ?
+https://poradnikprzedsiebiorcy.pl/-roznice-miedzy-http-a-https-i-ich-wplyw-na-pozycje-strony
+
+#### Protokół http
+
+Protokół http (skrót od angielskiego Hypertext Transfer Protocol) to protokół pozwalający na przesyłanie danych dla sieci internetowej. Za jego pomocą możliwe jest żądanie przesłania klientowi dokumentów znajdujących się w sieci.
+
+Http jest wykorzystywany już od lat 90. XX wieku właśnie w celu umożliwienia komunikacji pomiędzy klientem a serwerem. Początkowo możliwe było wysyłanie jednego żądania i otrzymanie danych w ramach jednego połączenia. Nie miały one dużej wagi ani rozmiaru. Rozbudowanie tego protokołu zgodnie z formatem MIME sprawiło, że wysyłanie większych ilości danych, w dodatku opartych na różnorodnych parametrach, stało się możliwe.
+
+Komunikacja w ramach protokołu http, a więc pomiędzy klientem a serwerem, opiera się na wysyłaniu danych pomiędzy nimi. Klient wysyła zapytanie, na co serwer odpowiada poprzez przesłanie tych danych zainteresowanemu. W tym miejscu warto zauważyć, że omawiany protokół należy do tak zwanych protokołów bezstanowych, co oznacza, że nie przechowuje on danych. Z jednej strony pozwala to na nieobciążanie serwera zbyt dużą ich ilością. Z drugiej natomiast okazuje się to kłopotliwe przy kilkukrotnym korzystaniu z witryny. Z tego powodu strony WWW oparte na tym protokole wspierane są przez system ciasteczek, które pozwalają na gromadzenie danych na temat osób odwiedzających witrynę.
+
+#### Protokół https
+
+Rozważając różnice pomiędzy protokołami http a https, musimy również przyjrzeć się wersji https. Hypertext Transfer Protocol Secure to wersja szyfrowana protokołu http. W odróżnieniu od swojej nieszyfrowanej wersji, gdzie komunikacja pojawia się pomiędzy klientem a serwerem bez wykorzystania specyficznych ustawień wysyłającego zapytanie, protokół https szyfruje dane. Początkowo odbywało się to przy pomocy protokołu SSL. Obecnie w użyciu jest protokół TLS. Ich wykorzystanie pozwala unikać sytuacji przechwycenia danych oraz ich ewentualnego zmienienia.
+
+W standardzie tworzenia stron internetowych oznaczenie protokołu https znajduje się w polu wyszukiwania tuż przed adresem internetowym strony. Protokół ten stosuje się do witryn, w przypadku których wymagane jest większe zaufanie co do serwera. Będzie on zatem zawsze obecny przy adresach URL sklepów internetowych, stron bankowości internetowej, kantorów oraz wszelkich witryn, w których następuje płatność kartą płatniczą. Co bardzo interesujące, protokół https wykorzystywany jest również przez wyszukiwarkę Google. Ponadto https stosuje się także do zabezpieczenia wszelkiego rodzaju forów internetowych, portali społecznościowych oraz wszelkiego rodzaju portali, na których użytkownicy dostają możliwość komentowania treści.
+
+#### Http a https
+
+W trakcie wykorzystywania zasobów internetu nie zastanawiamy się zbytnio nad tym, jaki protokół wykorzystywany jest do przesyłania danych. Różnica między http a https może mieć natomiast wpływ na nasze bezpieczeństwo w sieci.
+
+Https, oznaczający połączenia szyfrowane, pozwala na przesłanie danych w taki sposób, że są one trudniejsze do przechwycenia, i co za tym idzie – niemożliwe do zmiany jeszcze w trakcie ich transferowania. Nie będą również wykorzystywane później przez niepowołane do tego osoby. Z kolei przy wykorzystaniu połączenia nieszyfrowanego, a więc strony, której protokół to http, istnieje spore prawdopodobieństwo, że nasze dane dostaną się w niepowołane ręce. Z tego powodu specjaliści od zabezpieczeń zalecają użytkownikom sprawdzanie, czy połączenie wykorzystywane do płacenia zawiera skrót „https” i symbol zielonej kłódki. Oznacza to, że wszelkie strony internetowe, które wymagają od nas podania hasła lub loginu, zostają zabezpieczone. Ochrona danych klientów jest z kolei jednym z podstawowych warunków, które musi spełnić właściciel strony lub sklepu internetowego.
+
+Dużą różnicę pomiędzy protokołami http a https stanowi wykorzystywany przez nie port domyślny. W przypadku protokołu https jest to port 80. Dla szyfrowanego https portem właściwym jest ten o numerze 443.
+
+#### Http a https – pozycja strony internetowej
+
+Mimo że algorytmy Google’a dla pozycjonowania zmieniają się dość regularnie, możemy stwierdzić, że wykorzystywanie przez właścicieli stron szyfrowanego protokołu https jest jednym z tych czynników, które mogą wpłynąć na pozycje portali w wynikach wyszukiwania Google’a. Takie stwierdzenie pojawiło się w trakcie prezentowania nowych zmian w ramach zmian w algorytmach. Niemniej jednak, jak pokazują wyniki zaprezentowane przez Searchmetrics, bazujące na danych od momentu wprowadzania zmian związanych z protokołem https, nie odnotowano żadnych różnic pomiędzy pozycjami stron wykorzystujących http lub https. Oznacza to, że ten algorytm nie wprowadza dużych zmian, jeżeli chodzi o poprawę pozycji witryn internetowych wobec wyszukiwarek internetowych. A różnice w otrzymanych danych mogą zostać złożone na karb błędu statystycznego.
+
+Jak zapowiadają pracownicy Google’a, znaczenie algorytmu wykorzystującego protokół https ma wzrosnąć w przyszłości. Jednak specjaliści od pozycjonowania twierdzą, że istnieje wiele innych czynników, które wpływają na pozycję stron w internecie, na przykład: linki do strony, wartościowa treść czy liczba polubień na portalach społecznościowych, dzięki którym strony mogą piąć się wyżej w tym rankingu. Znaczenie protokołu https jako czynnika poprawiającego pozycję w wynikach wyszukiwania powinno być większe, jeżeli ma on być brany pod uwagę w trakcie pozycjonowania. Z tego powodu specjaliści od pozycjonowania przewidują, że mimo wprowadzonych zmian w algorytmach Google’a, przewaga stron posiadających protokół https nad tymi zarządzanymi poprzez http nie będzie się zwiększała.
+
 
 
 do opracowania
