@@ -367,6 +367,43 @@ Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składn
 
 Zapewnia aplikacjom metody dostępu do środowiska OSI. Warstwa ta świadczy usługi końcowe dla aplikacji, min.: udostępnianie zasobów (plików, drukarek). Na tym poziomie rezydują procesy sieciowe dostępne bezpośrednio dla użytkownika.
 
+### 6. Co zawiera nagłówek protokołu HTTP?
+http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
+
+
+#### Czym jest protokół HTTP
+
+HTTP to skrót od Hypertext Transfer Protocol i jest to główny protokół używany współcześnie w przegladarkach. Jest to protokół bezstanowy, tzn. ani serwer (ani klient) nie przechowuje informacji o tym, jakie były wcześniej zapytania pomiędzy określonym serwerem i klientem oraz nie posiada stanu wewnętrznego. Powoduje to, że każde zapytanie do serwera traktowane jest jako ‚nowe’, z punktu widzenia serwera aplikacji niemożliwe do powiązania z informacjami np. o zalogowanym użytkowniku. Tą bezstanowość można obejść, obecnie głównie za pomocą tzw. ciasteczek (będzie o nich nieco dalej), należy jednak pamiętać, że HTTP sam w sobie jest bezstanowy.
+
+#### Nagłówki HTTP
+
+Nagłówki HTTP spotkamy zarówno w zapytaniach, jak i w odpowiedziach. Są one pierwszymy liniami, oddzielone od ciała jedną pustą linią. Nagłówki są opcjonalne – protokół nie wymaga ich obecności. Nagłówki to pewnego rodzaju metadane i polecenia wymieniane przez przeglądarkę i serwer – mogą się w nich znaleźć informacje takie jak rodzaj przesyłanych treści (np. czy jest to obrazek czy plik JSON), sugestia dotycząca traktowania zawartości (czy przeglądarka ma wyświetlić daną treść, czy np. potraktować to jako pobieranie), jaki jest rozmiar przesyłanych danych, kiedy były modyfikowane, jakiego rodzaju odpowiedzi druga strona się spodziewa itp.
+
+Nagłówki przyjmują postać klucz-wartość, zapisywane w postaci:
+
+Klucz: wartość
+
+Najpierw jest klucz (przeważnie zaczyna się dużą literą, ale nie jest to wymagane), następnie dwukropek, spacja oraz wartość.
+
+W przeważającej większości nagłówki są automatycznie ustawiane przez serwer i aplikacja nie musi ich modyfikować / uzupełniać. Są jednak sytuacje, w których możemy chcieć wysłać określony nagłówek, mamy wtedy taką możliwość.
+
+Pełną listę standardowych nagłówków możesz znaleźć np. na Wikipedii, my omówimy sobie tylko te najważniejsze. Co ważne – nagłówek może mieć dowolną nazwę (klucz), nie musi ona być spośród tych określonych standardami. Dzięki temu możliwe jest implementowanie dodatkowej funkcjonalności pomiędzy serwerami, które się ze sobą komunikują. Możemy też dołaczać dowolne nagłówki – jeśli odbiorca wiadomości nie wie, jak je zinterpretować, po prostu je zignoruje.
+
+Poniższa tabela podsumowuje najczęściej używane nagłówki
+
+|Nagłówek| 	Opis| 	Przykład|
+|------------|-------|-----|
+|Content-Type| 	W zapytaniu oraz odpowiedzi określa, jakiego typu dane są przesyłane| 	Content-Type: application/json
+|Content-Length |	W zapytaniu oraz odpowiedzi zawiera informacje ile danych jest przesyłanych |	Content-Length: 20
+|Cookie 	|W zapytaniu przesyła zawartość Cookies przechowywanych dla danej witryny. Może przechowywać wiele wartości w postaci klucz=wartość, pary oddzielane są od siebie średnikami. |	Cookie: AcceptedCookiePolicy=1; Country=Poland;
+|Set-Cookie |	W odpowiedzi jest to polecenie serwera, aby przeglądarka ustawiła wartości Cookie; podobnie jak nagłówek |Cookie może zawierać wiele par postaci klucz=wartość oddzielonych średnikami |	Set-Cookie: UserID=JanNowak; SeenTutorial=1
+|Location 	|W odpowiedzi instuuje przeglądarkę o tym, że ma wykonać zapytanie pod inny adres. W ten sposób (w połaczeniu ze statusem np. 302) w aplikacji możemy przekierowywać pod inny adres |	Location: http://calieminnaaplikacja.com.pl/nowawersja
+|Last-Modified| 	W odpowiedzi serwer może poinformować, kiedy nastąpiła ostatnia zmiana zawartości. Format daty jest specyficzny dla protokołu HTTP i określony w dokumencie RCF 7231 	|Last-Modified: Tue, 15 May 2015 12:45:26 GMT
+|Content-Disposition| 	W odpowiedzi serwer może poinstuować przeglądarkę, aby zamiast wyświelać treść, pobrała ją. Można też określić nazwę, pod jaką przeglądarka powinna zasugerować zapisanie pliku 	|Content-Disposition: attachment; filename=”raport_roczny.pdf”
+|Host 	|W zapytaniu jest to nagłówek obowiązkowy, informuje serwer pod jaki adres domeny chcemy wysłać zapytanie (może to być też adres IP). Pomaga to serwerom obsługującym wiele domen prawidłowo przekierowywać zapytania |	Host: www.kobietydokodu.pl
+|Accept 	|W zapytaniu klient może poinformować serwer, jakiego typu odpowiedzi akceptuje. Dzięki temu serwer może zadecydować o wysłaniu odpowiedzi np. w XML a nie JSON, co ma zastosowanie w wielu API 	|Accept: application/xml
+
+
 
 do opracowania
 https://github.com/tvandame/back-end-developer-interview-questions
