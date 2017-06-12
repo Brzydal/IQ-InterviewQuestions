@@ -433,6 +433,107 @@ W przypadku aplikacji napisanych z użyciem Spring’a, wszystkie zapytania (naj
 
 To trochę uproszczony obraz, w grę wchodzą jeszcze filtry, intrceptory, potencjalnie mogą też aspekty, jednak nie zmieniają one idei i dokładniejszym ich omówieniem zajmiemy się przy innej okazji.
 
+### 5. Co to jest model OSI i jakie ma warstwy?
+http://egzamin-e13.pl/projektowanie-lokalnych-sieci-komputerowych-2/warstwy-sieci-komputerowych-model-osi-i-tcpip
+
+Model wzorcowy ISO OSI (angielskie Open System Interconnection Reference Model), jest kompleksowy standard komunikacji sieciowej (ISO 7498). Proces komunikacji wg tego modelu został podzielony na 7 etapów, zwanych warstwami, ze względu na sposób przechodzenia informacji pomiędzy nimi. Według modelu OSI każdy protokół komunikuje się ze swoim odpowiednikiem, będącym implementacją tego samego protokołu w równorzędnej warstwie komunikacyjnej systemu odległego. Dane przekazywane są od wierzchołka stosu, poprzez kolejne warstwy, aż do warstwy fizycznej, która przesyła je poprzez sieć do odległego hosta.
+
+#### Warstwa fizyczna
+
+Zapewnia transmisję danych pomiędzy węzłami sieci. Definiuje interfejsy sieciowe i medium transmisji. Określa m.in. sposób połączenia mechanicznego, elektrycznego, standard fizycznej transmisji danych. W skład jej obiektów wchodzą min.: przewody, karty sieciowe, modemy, wzmacniacze, koncentratory.
+
+#### Warstwa łącza danych
+
+Zapewnia niezawodność łącza danych. Definiuje mechanizmy kontroli błędów w przesyłanych ramkach lub pakietach - CRC (Cyclic Redundancy Check). Jest ona ściśle powiązana z warstwą fizyczną, która narzuca topologię. Warstwa ta często zajmuje się również kompresją danych. W skład jej obiektów wchodzą sterowniki urządzeń sieciowych, np.: sterowniki kart sieciowych oraz mosty i przełączniki.
+
+#### Warstwa sieciowa
+
+Zapewnia metody ustanawiania, utrzymywania i rozłączania połączenia sieciowego. Obsługuje błędy komunikacji. Ponadto jest odpowiedzialna za trasowanie pakietów w sieci, czyli wyznaczenie optymalnej trasy dla połączenia. W niektórych warunkach dopuszczalne jest gubienie pakietów przez tę warstwę. W skład jej obiektów wchodzą min.: rutery.
+
+#### Warstwa transportowa
+
+Zapewnia przezroczysty transfer danych typu point-to-point. Dba o kolejność pakietów otrzymywanych przez odbiorcę. Sprawdza poprawność przesyłanych pakietów i w przypadku ich uszkodzenia lub zaginięcia, zapewnia ich retransmisję.
+
+#### Warstwa sesji
+
+Zapewnia aplikacjom na odległych komputerach realizację wymiany danych pomiędzy nimi. Kontroluje nawiązywanie i zrywanie połączenia przez aplikację. Jest odpowiedzialna za poprawną realizację zapytania o daną usługę. Do warstwy tej można zaliczyć funkcje API udostępniane programiście przez bibliotekę realizującą dostęp do sieci na poziomie powyżej warstwy transportowej takie jak np. biblioteka strumieni i gniazdek BSD.
+
+#### Warstwa prezentacji
+
+Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składnię. Umożliwia przekształcenie danych na postać standardową, niezależną od aplikacji. Rozwiązuje takie problemy jak niezgodność reprezentacji liczb, znaków końca wiersza, liter narodowych itp. Odpowiada także za kompresję i szyfrowanie.
+
+#### Warstwa aplikacji
+
+Zapewnia aplikacjom metody dostępu do środowiska OSI. Warstwa ta świadczy usługi końcowe dla aplikacji, min.: udostępnianie zasobów (plików, drukarek). Na tym poziomie rezydują procesy sieciowe dostępne bezpośrednio dla użytkownika.
+
+### 6. Co zawiera nagłówek protokołu HTTP?
+http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
+
+
+#### Czym jest protokół HTTP
+
+HTTP to skrót od Hypertext Transfer Protocol i jest to główny protokół używany współcześnie w przegladarkach. Jest to protokół bezstanowy, tzn. ani serwer (ani klient) nie przechowuje informacji o tym, jakie były wcześniej zapytania pomiędzy określonym serwerem i klientem oraz nie posiada stanu wewnętrznego. Powoduje to, że każde zapytanie do serwera traktowane jest jako ‚nowe’, z punktu widzenia serwera aplikacji niemożliwe do powiązania z informacjami np. o zalogowanym użytkowniku. Tą bezstanowość można obejść, obecnie głównie za pomocą tzw. ciasteczek (będzie o nich nieco dalej), należy jednak pamiętać, że HTTP sam w sobie jest bezstanowy.
+
+#### Nagłówki HTTP
+
+Nagłówki HTTP spotkamy zarówno w zapytaniach, jak i w odpowiedziach. Są one pierwszymy liniami, oddzielone od ciała jedną pustą linią. Nagłówki są opcjonalne – protokół nie wymaga ich obecności. Nagłówki to pewnego rodzaju metadane i polecenia wymieniane przez przeglądarkę i serwer – mogą się w nich znaleźć informacje takie jak rodzaj przesyłanych treści (np. czy jest to obrazek czy plik JSON), sugestia dotycząca traktowania zawartości (czy przeglądarka ma wyświetlić daną treść, czy np. potraktować to jako pobieranie), jaki jest rozmiar przesyłanych danych, kiedy były modyfikowane, jakiego rodzaju odpowiedzi druga strona się spodziewa itp.
+
+Nagłówki przyjmują postać klucz-wartość, zapisywane w postaci:
+
+Klucz: wartość
+
+Najpierw jest klucz (przeważnie zaczyna się dużą literą, ale nie jest to wymagane), następnie dwukropek, spacja oraz wartość.
+
+W przeważającej większości nagłówki są automatycznie ustawiane przez serwer i aplikacja nie musi ich modyfikować / uzupełniać. Są jednak sytuacje, w których możemy chcieć wysłać określony nagłówek, mamy wtedy taką możliwość.
+
+Pełną listę standardowych nagłówków możesz znaleźć np. na Wikipedii, my omówimy sobie tylko te najważniejsze. Co ważne – nagłówek może mieć dowolną nazwę (klucz), nie musi ona być spośród tych określonych standardami. Dzięki temu możliwe jest implementowanie dodatkowej funkcjonalności pomiędzy serwerami, które się ze sobą komunikują. Możemy też dołaczać dowolne nagłówki – jeśli odbiorca wiadomości nie wie, jak je zinterpretować, po prostu je zignoruje.
+
+Poniższa tabela podsumowuje najczęściej używane nagłówki
+
+|Nagłówek| 	Opis| 	Przykład|
+|------------|-------|-----|
+|Content-Type| 	W zapytaniu oraz odpowiedzi określa, jakiego typu dane są przesyłane| 	Content-Type: application/json
+|Content-Length |	W zapytaniu oraz odpowiedzi zawiera informacje ile danych jest przesyłanych |	Content-Length: 20
+|Cookie 	|W zapytaniu przesyła zawartość Cookies przechowywanych dla danej witryny. Może przechowywać wiele wartości w postaci klucz=wartość, pary oddzielane są od siebie średnikami. |	Cookie: AcceptedCookiePolicy=1; Country=Poland;
+|Set-Cookie |	W odpowiedzi jest to polecenie serwera, aby przeglądarka ustawiła wartości Cookie; podobnie jak nagłówek |Cookie może zawierać wiele par postaci klucz=wartość oddzielonych średnikami |	Set-Cookie: UserID=JanNowak; SeenTutorial=1
+|Location 	|W odpowiedzi instuuje przeglądarkę o tym, że ma wykonać zapytanie pod inny adres. W ten sposób (w połaczeniu ze statusem np. 302) w aplikacji możemy przekierowywać pod inny adres |	Location: http://calieminnaaplikacja.com.pl/nowawersja
+|Last-Modified| 	W odpowiedzi serwer może poinformować, kiedy nastąpiła ostatnia zmiana zawartości. Format daty jest specyficzny dla protokołu HTTP i określony w dokumencie RCF 7231 	|Last-Modified: Tue, 15 May 2015 12:45:26 GMT
+|Content-Disposition| 	W odpowiedzi serwer może poinstuować przeglądarkę, aby zamiast wyświelać treść, pobrała ją. Można też określić nazwę, pod jaką przeglądarka powinna zasugerować zapisanie pliku 	|Content-Disposition: attachment; filename=”raport_roczny.pdf”
+|Host 	|W zapytaniu jest to nagłówek obowiązkowy, informuje serwer pod jaki adres domeny chcemy wysłać zapytanie (może to być też adres IP). Pomaga to serwerom obsługującym wiele domen prawidłowo przekierowywać zapytania |	Host: www.kobietydokodu.pl
+|Accept 	|W zapytaniu klient może poinformować serwer, jakiego typu odpowiedzi akceptuje. Dzięki temu serwer może zadecydować o wysłaniu odpowiedzi np. w XML a nie JSON, co ma zastosowanie w wielu API 	|Accept: application/xml
+
+### 7. Czym różni się Http od Https ?
+https://poradnikprzedsiebiorcy.pl/-roznice-miedzy-http-a-https-i-ich-wplyw-na-pozycje-strony
+
+#### Protokół http
+
+Protokół http (skrót od angielskiego Hypertext Transfer Protocol) to protokół pozwalający na przesyłanie danych dla sieci internetowej. Za jego pomocą możliwe jest żądanie przesłania klientowi dokumentów znajdujących się w sieci.
+
+Http jest wykorzystywany już od lat 90. XX wieku właśnie w celu umożliwienia komunikacji pomiędzy klientem a serwerem. Początkowo możliwe było wysyłanie jednego żądania i otrzymanie danych w ramach jednego połączenia. Nie miały one dużej wagi ani rozmiaru. Rozbudowanie tego protokołu zgodnie z formatem MIME sprawiło, że wysyłanie większych ilości danych, w dodatku opartych na różnorodnych parametrach, stało się możliwe.
+
+Komunikacja w ramach protokołu http, a więc pomiędzy klientem a serwerem, opiera się na wysyłaniu danych pomiędzy nimi. Klient wysyła zapytanie, na co serwer odpowiada poprzez przesłanie tych danych zainteresowanemu. W tym miejscu warto zauważyć, że omawiany protokół należy do tak zwanych protokołów bezstanowych, co oznacza, że nie przechowuje on danych. Z jednej strony pozwala to na nieobciążanie serwera zbyt dużą ich ilością. Z drugiej natomiast okazuje się to kłopotliwe przy kilkukrotnym korzystaniu z witryny. Z tego powodu strony WWW oparte na tym protokole wspierane są przez system ciasteczek, które pozwalają na gromadzenie danych na temat osób odwiedzających witrynę.
+
+#### Protokół https
+
+Rozważając różnice pomiędzy protokołami http a https, musimy również przyjrzeć się wersji https. Hypertext Transfer Protocol Secure to wersja szyfrowana protokołu http. W odróżnieniu od swojej nieszyfrowanej wersji, gdzie komunikacja pojawia się pomiędzy klientem a serwerem bez wykorzystania specyficznych ustawień wysyłającego zapytanie, protokół https szyfruje dane. Początkowo odbywało się to przy pomocy protokołu SSL. Obecnie w użyciu jest protokół TLS. Ich wykorzystanie pozwala unikać sytuacji przechwycenia danych oraz ich ewentualnego zmienienia.
+
+W standardzie tworzenia stron internetowych oznaczenie protokołu https znajduje się w polu wyszukiwania tuż przed adresem internetowym strony. Protokół ten stosuje się do witryn, w przypadku których wymagane jest większe zaufanie co do serwera. Będzie on zatem zawsze obecny przy adresach URL sklepów internetowych, stron bankowości internetowej, kantorów oraz wszelkich witryn, w których następuje płatność kartą płatniczą. Co bardzo interesujące, protokół https wykorzystywany jest również przez wyszukiwarkę Google. Ponadto https stosuje się także do zabezpieczenia wszelkiego rodzaju forów internetowych, portali społecznościowych oraz wszelkiego rodzaju portali, na których użytkownicy dostają możliwość komentowania treści.
+
+#### Http a https
+
+W trakcie wykorzystywania zasobów internetu nie zastanawiamy się zbytnio nad tym, jaki protokół wykorzystywany jest do przesyłania danych. Różnica między http a https może mieć natomiast wpływ na nasze bezpieczeństwo w sieci.
+
+Https, oznaczający połączenia szyfrowane, pozwala na przesłanie danych w taki sposób, że są one trudniejsze do przechwycenia, i co za tym idzie – niemożliwe do zmiany jeszcze w trakcie ich transferowania. Nie będą również wykorzystywane później przez niepowołane do tego osoby. Z kolei przy wykorzystaniu połączenia nieszyfrowanego, a więc strony, której protokół to http, istnieje spore prawdopodobieństwo, że nasze dane dostaną się w niepowołane ręce. Z tego powodu specjaliści od zabezpieczeń zalecają użytkownikom sprawdzanie, czy połączenie wykorzystywane do płacenia zawiera skrót „https” i symbol zielonej kłódki. Oznacza to, że wszelkie strony internetowe, które wymagają od nas podania hasła lub loginu, zostają zabezpieczone. Ochrona danych klientów jest z kolei jednym z podstawowych warunków, które musi spełnić właściciel strony lub sklepu internetowego.
+
+Dużą różnicę pomiędzy protokołami http a https stanowi wykorzystywany przez nie port domyślny. W przypadku protokołu https jest to port 80. Dla szyfrowanego https portem właściwym jest ten o numerze 443.
+
+#### Http a https – pozycja strony internetowej
+
+Mimo że algorytmy Google’a dla pozycjonowania zmieniają się dość regularnie, możemy stwierdzić, że wykorzystywanie przez właścicieli stron szyfrowanego protokołu https jest jednym z tych czynników, które mogą wpłynąć na pozycje portali w wynikach wyszukiwania Google’a. Takie stwierdzenie pojawiło się w trakcie prezentowania nowych zmian w ramach zmian w algorytmach. Niemniej jednak, jak pokazują wyniki zaprezentowane przez Searchmetrics, bazujące na danych od momentu wprowadzania zmian związanych z protokołem https, nie odnotowano żadnych różnic pomiędzy pozycjami stron wykorzystujących http lub https. Oznacza to, że ten algorytm nie wprowadza dużych zmian, jeżeli chodzi o poprawę pozycji witryn internetowych wobec wyszukiwarek internetowych. A różnice w otrzymanych danych mogą zostać złożone na karb błędu statystycznego.
+
+Jak zapowiadają pracownicy Google’a, znaczenie algorytmu wykorzystującego protokół https ma wzrosnąć w przyszłości. Jednak specjaliści od pozycjonowania twierdzą, że istnieje wiele innych czynników, które wpływają na pozycję stron w internecie, na przykład: linki do strony, wartościowa treść czy liczba polubień na portalach społecznościowych, dzięki którym strony mogą piąć się wyżej w tym rankingu. Znaczenie protokołu https jako czynnika poprawiającego pozycję w wynikach wyszukiwania powinno być większe, jeżeli ma on być brany pod uwagę w trakcie pozycjonowania. Z tego powodu specjaliści od pozycjonowania przewidują, że mimo wprowadzonych zmian w algorytmach Google’a, przewaga stron posiadających protokół https nad tymi zarządzanymi poprzez http nie będzie się zwiększała.
+
+
 
 do opracowania
 https://github.com/tvandame/back-end-developer-interview-questions
