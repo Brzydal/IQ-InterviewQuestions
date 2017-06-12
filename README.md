@@ -71,6 +71,38 @@ Za pomocą wyrażeń regularnych (ang. regular expressions albo w skrócie regex
 ```
 można próbować sprawdzać poprawność wpisanego w formularz adresu e-mail.
 
+### 7. Co to jest rekurencja i kiedy warto jej używać ?
+https://pl.wikipedia.org/wiki/Rekurencja
+
+ Jedna funkcja może wywołać inną. Funkcja może wywołać nawet samą siebie. Może nie być oczywiste, dlaczego to jest dobra rzecz, ale okazuje się, że to jedna z najbardziej magicznych rzeczy, które program może zrobić. Na przykład, spójrz na poniższą funkcję:
+```Python
+def odlicz(n):
+    if n <= 0:
+        print('Odpalamy!')
+    else:
+        print(n)
+        odlicz(n - 1)
+```
+Jeśli n jest ujemne lub równe 0, to wyświetla ona słowo 'Odpalamy!'. W przeciwnym wypadku wyświetla n i wywołuje funkcję o nazwie odlicz (samą siebie) przekazując jej n - 1 jako argument.
+
+Co się stanie, gdy wywołamy tą funkcję w taki sposób?
+
+>odlicz(3)
+  Wykonywanie odlicz zaczyna się od n = 3. n jest większe niż 0, więc wyświetla wartość 3 i wywołuje samą siebie...
+  Wykonywanie odlicz zaczyna się od n = 2. n jest większe niż 0, więc wyświetla wartość 2 i wywołuje samą siebie...
+  Wykonywanie odlicz zaczyna się od n = 1. n jest większe niż 0, więc wyświetla wartość 1 i wywołuje samą siebie...
+  Wykonywanie odlicz zaczyna się od n = 0. n nie jest większe niż 0, więc wyświetla tamto słowo i wywołuje samą siebie...
+  odlicz, które dostało n = 1, kończy się.
+  odlicz, które dostało n = 2, kończy się.
+  odlicz, które dostało n = 3, kończy się.
+
+I wtedy wracamy do __main__. Całe wyjście wygląda tak:
+
+>3
+2
+1
+Odpalamy!
+
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
@@ -211,6 +243,47 @@ Generator w Pythonie jest funkcją, która zwraca iterowalny obiekt. Możemy ite
 - Możemy zastąpić pętle generatorami w celu wydajnego obliczania wyników z użyciem dużych zbiorów danych.
 - Generatory są użyteczne, gdy nie chcemy otrzymać wszystkich wyników i kiedy chcemy wstrzymać iterację na jakiś czas.
 - Zamiast używać funkcji callback możemy zastąpić ją generatorem. Możemy napisać pętlę wewnątrz funkcji robi to samo co wywołanie zwrotne i przekształca ją w generator.
+
+### 8. Jakie znasz rodzaje metod w Pythonie?
+http://xion.org.pl/2011/10/03/trzy-rodzaje-metod-w-pythonie/
+
+- Metody instancyjne - zaryzykuję stwierdzenie, że metody instancyjne są domyślnym typem, który w Pythonie jest dodatkowo zaznaczony obecnością specjalnego parametru – self – występującego zawsze jako pierwszy argument. To odpowiednik this z języków C++, C# czy Java i reprezentuje instancję obiektu, na rzecz której wywoływana jest metoda:
+    ```Python
+    class Counter(object):
+        def __init__(self, value = 0):
+            self._value = value
+        def increment(self, by = 1):
+            self._value += by
+    ```
+
+- Metody statyczne - istnieją również takie metody, które nie operują na konkretnej instancji klasy. Nazywa się je metodami statycznymi. W Pythonie nie posiadają one parametru self, lecz są opatrzone dekoratorem @staticmethod. Statyczną metodę można wywołać zarówno przy pomocy nazwy klasy (Counter.format_string()), jak i jej obiektu (Counter().format_string()), ale w obu przypadkach rezultat będzie ten sam. Technicznie jest to bowiem zwyczajna funkcja umieszczona po prostu w zasięgu klasy zamiast zasięgu globalnego.
+    ```Python
+    @staticmethod
+    def format_string():
+        return "%d"
+    ```
+
+- Metody klasowe - trzeci typ, mieści się w pewnym sensie pomiędzy dwoma opisanymi powyżej. Nazywają się tak, bo są wywoływane na rzecz całej klasy (a nie jakiejś jej instancji) i przyjmują ową klasę jako swój pierwszy parametr. (Argument ten jest często nazywany cls, ale jest to o wiele słabsza konwencja niż ta dotycząca self).
+W celu odróżnienia od innych rodzajów, metody klasowe oznaczone są dekoratorem @classmethod. Podobnie jak metody statyczne, można je wywoływać na dwa sposoby – przy pomocy klasy lub obiektu – ale w obu przypadkach do cls trafi wyłącznie klasa. Tutaj akurat będzie to Counter, lecz w ogólności może to być także klasa pochodna.
+    ```Python
+    class BoundedCounter(Counter):
+        MAX = 100
+
+        def __init__(self, value = 0):
+            if value > self.MAX:
+                raise ValueError, "Initial value cannot exceed maximum"
+            super(BoundedCounter, self).__init__(value)
+
+        def increment(self, by = 1):
+            super(BoundedCounter, self).increment(by)
+            self._value = min(self._value, self.MAX)
+
+        @classmethod
+        def from_other(cls, counter):
+            value = min(counter._value, cls.MAX)
+            return cls(value)
+    ```
+
 
 
 ## Bazy Danych
