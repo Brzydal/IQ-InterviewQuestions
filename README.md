@@ -179,6 +179,7 @@ https://codehabitude.com/2013/12/24/python-objects-mutable-vs-immutable/
 Nie wszystkie typy zmiennych w Pythonie reagują tak samo na zmiany. Jedne typy są mutable, czyli zmienne, a inne immutable, czyli niezmienne i zwracają raczej nowy obiekt tego samego typu, ale same pozostają takie same.
 
 Obiekty niezmienne:
+
     - int
     - float
     - decimal
@@ -317,6 +318,7 @@ DNS to złożony system komputerowy oraz prawny. Zapewnia z jednej strony rejest
 
 ### 4. Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres?
 https://youtu.be/M2wvvLmRkwo
+
 http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
 
 To pytanie ma drugie dno – poza tym, że jest pewnego rodzaju podsumowaniem powyższych informacji, pada ono bardzo często na rozmowach rekrutacyjnych :) Zacznijmy więc od początku.
