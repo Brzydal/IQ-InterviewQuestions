@@ -284,6 +284,30 @@ W celu odróżnienia od innych rodzajów, metody klasowe oznaczone są dekorator
             return cls(value)
     ```
 
+### 9. Co to jest lambda w Pythonie i jak jej używać ?
+https://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Wyra%C5%BCenia_lambda
+
+Python za pomocą pewnych wyrażeń pozwala nam zdefiniować jednolinijkowe mini-funkcje. Te tzw. funkcje lambda są zapożyczone z Lispa i mogą być użyte wszędzie tam, gdzie potrzebna jest funkcja. Lambda pobiera dowolną liczbę argumentów (włączając argumenty opcjonalne) i zwraca wartość, którą otrzymujemy po wykonaniu pojedynczego wyrażenia. Funkcje lambda nie mogą zawierać poleceń i nie mogą zawierać więcej niż jednego wyrażenia. Nie próbujmy upchać zbyt dużo w funkcję lambda; zamiast tego jeśli potrzebujemy coś bardziej złożonego.
+
+Zdefiniujmy normalną funkcję:
+
+```Python
+def f(x):
+    return x*2
+```
+  W ten sposób tworzymy funkcję lambda, która daje ten sam efekt jak normalna funkcja nad nią. Zwróćmy uwagę na skróconą składnię: nie ma nawiasów wokół listy argumentów, brakuje też słowa kluczowego return (cała funkcja może być tylko jednym wyrażeniem). Funkcja nie posiada również nazwy, ale może być wywołana za pomocą zmiennej, do której zostanie przypisana.
+```Python
+g = lambda x: x*2
+```
+Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki sposób korzystania z wyrażeń lambda nie jest zbyt przydatny, ale w ten sposób możemy zobaczyć, że za pomocą tego wyrażenia tworzymy funkcję jednolinijkową.
+```Python
+(lambda x: x*2)(3)
+```
+
+
+
+
+
 
 
 ## Bazy Danych
