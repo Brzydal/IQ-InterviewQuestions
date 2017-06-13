@@ -148,6 +148,22 @@ Drzewo – struktura danych reprezentująca drzewo matematyczne. W naturalny spo
 
 Znaczenie tych struktur jest bardzo duże i ze względu na swoje własności drzewa są stosowane praktycznie w każdej dziedzinie informatyki (np. bazy danych, grafika komputerowa, przetwarzanie tekstu, telekomunikacja).
 
+#### 11. Co to są testy jednostkowe?
+https://pl.wikipedia.org/wiki/Test_jednostkowy
+http://devstyle.pl/2011/08/11/ut-1-co-to-sa-testy-i-po-co-sa-testy-jednostkowe/
+
+Test jednostkowy (ang. unit test) – metoda testowania tworzonego oprogramowania poprzez wykonywanie testów weryfikujących poprawność działania pojedynczych elementów (jednostek) programu – np. metod lub obiektów w programowaniu obiektowym lub procedur w programowaniu proceduralnym. Testowany fragment programu poddawany jest testowi, który wykonuje go i porównuje wynik (np. zwrócone wartości, stan obiektu, zgłoszone wyjątki) z oczekiwanymi wynikami – tak pozytywnymi, jak i negatywnymi (niepowodzenie działania kodu w określonych sytuacjach również może podlegać testowaniu).
+
+Zaletą testów jednostkowych jest możliwość wykonywania na bieżąco w pełni zautomatyzowanych testów na modyfikowanych elementach programu, co umożliwia często wychwycenie błędu natychmiast po jego pojawieniu się i szybką jego lokalizację zanim dojdzie do wprowadzenia błędnego fragmentu do programu. Testy jednostkowe są również formą specyfikacji. Z powyższych powodów są szczególnie popularne w programowaniu ekstremalnym.
+
+Testy można podzielić na następujące warianty:
+
+-    analiza ścieżek
+-    użycie klas równoważności
+-    testowanie wartości brzegowych
+-    testowanie składniowe
+
+
 ##### Budowa drzewa
 
 Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawędzi. Jeśli drzewo nie jest puste, tzn. liczba wierzchołków jest większa od zera, jeden z nich jest wyróżniony i nazywany korzeniem drzewa; na rysunku jest oznaczony literą F. Ciąg krawędzi łączących węzły nazywa się ścieżką. Istnieje dokładnie jedna ścieżka łącząca korzeń z każdym pozostałym wierzchołkiem. Liczba krawędzi w ścieżce od korzenia do węzła jest nazywana długością – liczba ta określa poziom węzła. Wysokością drzewa jest największy poziom istniejący w drzewie. Np. korzeń znajduje się na 0. poziomie, węzły A, D i I na poziomie 2.; wysokość drzewa to 3. Wszystkie wierzchołki połączone z danym wierzchołkiem, a leżące na następnym poziomie są nazywane dziećmi tego węzła (np. dziećmi wierzchołka F są B i G, natomiast wierzchołka B: A i D). Wierzchołek może mieć dowolną liczbę dzieci, jeśli nie ma ich wcale nazywany jest liściem. Liśćmi w przykładowym drzewie są A, C, E, H. Wierzchołek jest rodzicem dla każdego swojego dziecka. Każdy węzeł ma dokładnie jednego rodzica, wyjątkiem jest korzeń drzewa, który nie ma rodzica.
