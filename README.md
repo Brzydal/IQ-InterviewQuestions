@@ -140,6 +140,27 @@ DI jest sposobem osiągnięcia luźnych powiązań (ang. loose coupling).
 
 Użycie tej techniki pozwala tworzyć łatwo testowalne obiekty. Sprawdza się szczególnie w powiązaniu z programowaniem sterowanym testami (ang. test-driven development). Polega ono w skrócie na następującym tworzeniu oprogramowania: opracowujemy interfejsy (diagram klas), opracowujemy testy jednostkowe, które testują funkcjonalność interfejsu (w jaki sposób przetestować, czy działanie jest poprawne), a dopiero później piszemy implementację. Unikanie zależności od konkretnych implementacji współpracujących klas, a bazowanie tylko na interfejsach umożliwia tworzenie kontrolowanych testów - jesteśmy w stanie skupić się wyłącznie na funkcjonalności wybranej klasy; zwłaszcza, gdy wykorzystamy obiekty-zaślepki (ang. mock-objects, proste pseudoimplementacje, używane w celu testowania). DI pozwala wstrzyknąć do obiektów testowanych zależności od obiektów-zaślepek. W środowisku produkcyjnym do obiektów tych wstrzykiwane są zależności od prawdziwych obiektów.
 
+#### 10. Jakie znasz drzewa i jakie operacje można na nich wykonać ?
+https://pl.wikipedia.org/wiki/Drzewo_(informatyka)
+http://eduinf.waw.pl/inf/alg/001_search/0108.php
+
+Drzewo – struktura danych reprezentująca drzewo matematyczne. W naturalny sposób reprezentuje hierarchię danych (obiektów fizycznych i abstrakcyjnych, pojęć, itp.) jest więc stosowane głównie do tego celu. Drzewa ułatwiają i przyspieszają wyszukiwanie, a także pozwalają w łatwy sposób operować na posortowanych danych.
+
+Znaczenie tych struktur jest bardzo duże i ze względu na swoje własności drzewa są stosowane praktycznie w każdej dziedzinie informatyki (np. bazy danych, grafika komputerowa, przetwarzanie tekstu, telekomunikacja).
+
+##### Budowa drzewa
+
+Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawędzi. Jeśli drzewo nie jest puste, tzn. liczba wierzchołków jest większa od zera, jeden z nich jest wyróżniony i nazywany korzeniem drzewa; na rysunku jest oznaczony literą F. Ciąg krawędzi łączących węzły nazywa się ścieżką. Istnieje dokładnie jedna ścieżka łącząca korzeń z każdym pozostałym wierzchołkiem. Liczba krawędzi w ścieżce od korzenia do węzła jest nazywana długością – liczba ta określa poziom węzła. Wysokością drzewa jest największy poziom istniejący w drzewie. Np. korzeń znajduje się na 0. poziomie, węzły A, D i I na poziomie 2.; wysokość drzewa to 3. Wszystkie wierzchołki połączone z danym wierzchołkiem, a leżące na następnym poziomie są nazywane dziećmi tego węzła (np. dziećmi wierzchołka F są B i G, natomiast wierzchołka B: A i D). Wierzchołek może mieć dowolną liczbę dzieci, jeśli nie ma ich wcale nazywany jest liściem. Liśćmi w przykładowym drzewie są A, C, E, H. Wierzchołek jest rodzicem dla każdego swojego dziecka. Każdy węzeł ma dokładnie jednego rodzica, wyjątkiem jest korzeń drzewa, który nie ma rodzica.
+
+#### Podstawowe operacje na drzewach to:
+
+- wyliczenie wszystkich elementów drzewa,
+- wyszukanie konkretnego elementu,
+- dodanie nowego elementu w określonym miejscu drzewa,
+- usunięcie elementu.
+
+
+
 
 
 
