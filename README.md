@@ -103,6 +103,29 @@ I wtedy wracamy do __main__. Całe wyjście wygląda tak:
 1
 Odpalamy!
 
+#### 8. Jakie znasz paradygmaty programowania ?
+https://pl.wikipedia.org/wiki/Paradygmat_programowania
+
+   - programowanie proceduralne
+   - programowanie strukturalne
+   - programowanie funkcyjne
+   - programowanie imperatywne
+   - programowanie obiektowe
+   - programowanie uogólnione
+   - programowanie sterowane zdarzeniami
+   - programowanie logiczne (np. Prolog)
+   - programowanie aspektowe (np. AspectJ)
+   - programowanie deklaratywne
+   - programowanie agentowe
+   - programowanie modularne
+
+Paradygmat programowania (ang. programming paradigm) — wzorzec programowania komputerów przedkładany w danym okresie rozwoju informatyki ponad inne lub ceniony w pewnych okolicznościach lub zastosowaniach.
+
+Paradygmat programowania definiuje sposób patrzenia programisty na przepływ sterowania i wykonywanie programu komputerowego. Przykładowo, w programowaniu obiektowym jest on traktowany jako zbiór współpracujących ze sobą obiektów, podczas gdy w programowaniu funkcyjnym definiujemy, co trzeba wykonać, a nie w jaki sposób.
+
+Różne języki programowania mogą wspierać różne paradygmaty programowania. Przykładowo, Smalltalk i Java są ściśle zaprojektowane dla potrzeb programowania obiektowego, natomiast Haskell jest językiem funkcyjnym. Istnieją także języki wspierające kilka paradygmatów, np. Common Lisp oraz Python.
+
+
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
@@ -303,12 +326,6 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 ```Python
 (lambda x: x*2)(3)
 ```
-
-
-
-
-
-
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
