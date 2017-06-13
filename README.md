@@ -125,6 +125,23 @@ Paradygmat programowania definiuje sposób patrzenia programisty na przepływ st
 
 Różne języki programowania mogą wspierać różne paradygmaty programowania. Przykładowo, Smalltalk i Java są ściśle zaprojektowane dla potrzeb programowania obiektowego, natomiast Haskell jest językiem funkcyjnym. Istnieją także języki wspierające kilka paradygmatów, np. Common Lisp oraz Python.
 
+#### 9. Co to jest wstrzykiwanie zależności ?
+http://devstyle.pl/2014/05/26/kilka-postw-o-dependency-injection/
+
+Wstrzykiwanie zależności (ang. Dependency Injection, DI) – wzorzec projektowy i wzorzec architektury oprogramowania polegający na usuwaniu bezpośrednich zależności pomiędzy komponentami na rzecz architektury typu plug-in. Polega na przekazywaniu gotowych, utworzonych instancji obiektów udostępniających swoje metody i właściwości obiektom, które z nich korzystają (np. jako parametry konstruktora). Stanowi alternatywę do podejścia, gdzie obiekty tworzą instancję obiektów, z których korzystają np. we własnym konstruktorze.
+
+Jest on często utożsamiany z odwróceniem sterowania (ang. Inversion of Control, IoC), jakkolwiek z technicznego punktu widzenia DI jest jedną ze szczególnych (obecnie najpopularniejszą) realizacji paradygmatu IoC.
+
+DI silnie preferuje zewnętrzne tworzenie połączeń (zależności) pomiędzy komponentami oprogramowania (np. asocjacje w klasach), nad zlecaniem tworzenia zależności im samym. Jest to wzorzec, w którym odpowiedzialność za tworzenie obiektów i łączenie jest przeniesiona z obiektów do fabryki (np. kontenera IoC). Na żądanie kodu fabryka tworzy obiekt, lub udostępnia obiekt z puli obiektów, ustawiając mu powiązania z innymi obiektami (np. wstrzykiwanie konstruktorem –- Constructor Injection, wstrzykiwanie mutatorami – Setter Injection, użycie interfejsu Interface Injection lub w mieszany sposób). DI jest więc realizacją "odwrócenia sterowania" w sensie tworzenia i wiązania obiektów.
+
+W rozbudowanych implementacjach fabryka może wykonywać czynności dodatkowe, np. Spring Framework pozwala na używanie aspektów, można więc do obiektu dodać automatycznie obsługę transakcji, logowania, itp.
+
+DI jest sposobem osiągnięcia luźnych powiązań (ang. loose coupling).
+
+Użycie tej techniki pozwala tworzyć łatwo testowalne obiekty. Sprawdza się szczególnie w powiązaniu z programowaniem sterowanym testami (ang. test-driven development). Polega ono w skrócie na następującym tworzeniu oprogramowania: opracowujemy interfejsy (diagram klas), opracowujemy testy jednostkowe, które testują funkcjonalność interfejsu (w jaki sposób przetestować, czy działanie jest poprawne), a dopiero później piszemy implementację. Unikanie zależności od konkretnych implementacji współpracujących klas, a bazowanie tylko na interfejsach umożliwia tworzenie kontrolowanych testów - jesteśmy w stanie skupić się wyłącznie na funkcjonalności wybranej klasy; zwłaszcza, gdy wykorzystamy obiekty-zaślepki (ang. mock-objects, proste pseudoimplementacje, używane w celu testowania). DI pozwala wstrzyknąć do obiektów testowanych zależności od obiektów-zaślepek. W środowisku produkcyjnym do obiektów tych wstrzykiwane są zależności od prawdziwych obiektów.
+
+
+
 
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
