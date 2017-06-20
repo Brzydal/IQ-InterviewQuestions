@@ -149,6 +149,17 @@ Drzewo – struktura danych reprezentująca drzewo matematyczne. W naturalny spo
 
 Znaczenie tych struktur jest bardzo duże i ze względu na swoje własności drzewa są stosowane praktycznie w każdej dziedzinie informatyki (np. bazy danych, grafika komputerowa, przetwarzanie tekstu, telekomunikacja).
 
+##### Budowa drzewa
+
+Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawędzi. Jeśli drzewo nie jest puste, tzn. liczba wierzchołków jest większa od zera, jeden z nich jest wyróżniony i nazywany korzeniem drzewa; na rysunku jest oznaczony literą F. Ciąg krawędzi łączących węzły nazywa się ścieżką. Istnieje dokładnie jedna ścieżka łącząca korzeń z każdym pozostałym wierzchołkiem. Liczba krawędzi w ścieżce od korzenia do węzła jest nazywana długością – liczba ta określa poziom węzła. Wysokością drzewa jest największy poziom istniejący w drzewie. Np. korzeń znajduje się na 0. poziomie, węzły A, D i I na poziomie 2.; wysokość drzewa to 3. Wszystkie wierzchołki połączone z danym wierzchołkiem, a leżące na następnym poziomie są nazywane dziećmi tego węzła (np. dziećmi wierzchołka F są B i G, natomiast wierzchołka B: A i D). Wierzchołek może mieć dowolną liczbę dzieci, jeśli nie ma ich wcale nazywany jest liściem. Liśćmi w przykładowym drzewie są A, C, E, H. Wierzchołek jest rodzicem dla każdego swojego dziecka. Każdy węzeł ma dokładnie jednego rodzica, wyjątkiem jest korzeń drzewa, który nie ma rodzica.
+
+#### Podstawowe operacje na drzewach to:
+
+- wyliczenie wszystkich elementów drzewa,
+- wyszukanie konkretnego elementu,
+- dodanie nowego elementu w określonym miejscu drzewa,
+- usunięcie elementu.
+
 #### 11. Co to są testy jednostkowe?
 https://pl.wikipedia.org/wiki/Test_jednostkowy
 http://devstyle.pl/2011/08/11/ut-1-co-to-sa-testy-i-po-co-sa-testy-jednostkowe/
@@ -164,17 +175,68 @@ Testy można podzielić na następujące warianty:
 -    testowanie wartości brzegowych
 -    testowanie składniowe
 
+### 12. Co to jest SOLID?
+https://www.p-programowanie.pl/paradygmaty-programowania/zasady-solid/
+https://sii.pl/blog/solid-dobre-praktyki-programowania/
 
-##### Budowa drzewa
+SOLID jest skrótem opisującym podstawowe założenia programowania obiektowego.
 
-Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawędzi. Jeśli drzewo nie jest puste, tzn. liczba wierzchołków jest większa od zera, jeden z nich jest wyróżniony i nazywany korzeniem drzewa; na rysunku jest oznaczony literą F. Ciąg krawędzi łączących węzły nazywa się ścieżką. Istnieje dokładnie jedna ścieżka łącząca korzeń z każdym pozostałym wierzchołkiem. Liczba krawędzi w ścieżce od korzenia do węzła jest nazywana długością – liczba ta określa poziom węzła. Wysokością drzewa jest największy poziom istniejący w drzewie. Np. korzeń znajduje się na 0. poziomie, węzły A, D i I na poziomie 2.; wysokość drzewa to 3. Wszystkie wierzchołki połączone z danym wierzchołkiem, a leżące na następnym poziomie są nazywane dziećmi tego węzła (np. dziećmi wierzchołka F są B i G, natomiast wierzchołka B: A i D). Wierzchołek może mieć dowolną liczbę dzieci, jeśli nie ma ich wcale nazywany jest liściem. Liśćmi w przykładowym drzewie są A, C, E, H. Wierzchołek jest rodzicem dla każdego swojego dziecka. Każdy węzeł ma dokładnie jednego rodzica, wyjątkiem jest korzeń drzewa, który nie ma rodzica.
+#### 1.   Zasada pojedynczej odpowiedzialności (ang. Single-Responsibility Principle – SRP)
 
-#### Podstawowe operacje na drzewach to:
+Zasadę pojedynczej odpowiedzialności można w sumie opisać jednym prostym zdaniem, a brzmi ono następująco: „Żadna klasa nie może być modyfikowana z więcej niż jednego powodu”.
 
-- wyliczenie wszystkich elementów drzewa,
-- wyszukanie konkretnego elementu,
-- dodanie nowego elementu w określonym miejscu drzewa,
-- usunięcie elementu.
+Z mojego doświadczenia wynika, iż jeśli jakaś klasa jest odpowiedzialna za więcej niż jeden obszar naszego projektu jest to bardzo niekorzystne. Może się zdarzyć bowiem, że modyfikując jeden obszar mimowolnie wpłyniemy na zupełnie inny, który nie jest w żaden sposób związany z pierwszym. Dodatkowo, każdy taki związek wpływa negatywnie na cały projekt poprzez zmniejszenie jego elastyczności, a co za tym idzie – prowadzi do nieoczekiwanych rezultatów wprowadzanych przez nas zmian.
+
+Zasada pojedynczej odpowiedzialności w teorii jest jedną z najprostszych ze wszystkich wymienionych przeze mnie reguł, jednakże, jeśli chodzi o praktykę jest najtrudniejsza. Muszę przyznać, że sporo czasu minęło, zanim w 100% nauczyłem się ją wykorzystywać.
+
+#### 2.    Zasada otwarte – zamknięte (ang. Open/Closed Principle – OCP)
+
+Zasada otwarte – zamknięte brzmi następująco: „Składniki oprogramowania (klasy, moduły, funkcje itp.) powinny być otwarte na rozbudowę, ale zamknięte dla modyfikacji”.
+
+Rozbijając powyższą definicję na mniejsze części, można wydobyć dwa kluczowe atrybuty, którymi powinny się charakteryzować tworzone przez nas moduły, są nimi: „otwarte na rozbudowę” oraz „zamknięte dla modyfikacji”.
+
+Co należy rozumieć przez stwierdzenie, że moduł musi być „otwarty na rozbudowę”? Mianowicie to, że musi istnieć stosunkowo prosty sposób rozbudowy zachowań takiego modułu.
+
+„Zamknięte dla modyfikacji” oznacza z kolei, że rozbudowa modułu nie może być przeprowadzona w sposób, który spowoduje zmianę istniejącego kodu źródłowego.
+
+Jestem pewien, że każdy z nas podczas swojej pracy miał do czynienia ze zmieniającymi się wymaganiami aplikacji. Zgodność naszego projektu z tą zasadą jest jednym z warunków, które zagwarantują nam takie korzyści jak: elastyczność, możliwość wielokrotnego wykorzystywania istniejącego kodu, czy łatwość konserwacji naszego projektu.
+
+#### 3.    Zasada podstawiania Liskov (ang. Liskov Substitution Principle – LSP)
+Można powiedzieć, że Zasada podstawiania Liskov jest jednym z warunków zasady otwarte – zamknięte. Jej definicja wygląda następująco: „Musi istnieć możliwość zastępowania typów bazowych ich podtypami”.
+
+Dlaczego uważam, że zasada podstawiania Liskov jest jednym z warunków zasady otwarte – zamknięte? Między innymi dlatego, że możliwość zastępowania podtypów umożliwia rozbudowę modułów (klas, typów bazowych) bez konieczności ich bezpośredniego modyfikowania.
+
+W celu zobrazowania działania zasady podstawiania Liskov, posłużę się prostym przykładem. Załóżmy, że posiadamy dwie klasy, w których znajdujemy wiele wspólnych składowych. Wspólnymi składowymi mogą być: zbiór właściwości, metod itd. Co w takiej sytuacji należałoby zrobić? Zgodnie z zasadą podstawiania Liskov, wypadałoby wyodrębnić wspólne elementy obu klas do jednej klasy – najlepiej abstrakcyjnej.
+
+Wyodrębnianie składowych jest niezwykle silną bronią każdego programisty. Jeżeli bowiem istnieje możliwość wyodrębnienia identycznych składowych z dwóch lub większej ilości klas, to jest wielce prawdopodobne, że przyjdzie taki moment, w którym inne klasy będą do tych składowych się odwoływały.
+
+#### 4.   Zasada segregacji interfejsów (ang. Interface Segregation Principle – ISP)
+Zasada segregacji interfejsów ma za zadanie przede wszystkich wyeliminowanie nieporęcznych, niepotrzebnie rozbudowanych interfejsów. Do tej grupy można zaliczyć nadmiernie rozbudowane i niespójne interfejsy klas. Każdy taki interfejs zgodnie z tą zasadą powinien zostać podzielony na mniejsze grupy metod.
+
+Przeanalizujmy teraz mały przykład. Załóżmy, że posiadamy pewien interfejs oraz dwie klasy, które go implementują. Klasa A implementuje nasz przykładowy interfejs w całości – wszystkie funkcje, natomiast klasa B posiada pełną implementację tylko części z nich, pozostałe, które są niepotrzebne pozostają puste lub zwracają domyśle wartości. Jeśli mamy do czynienia z taką sytuacją, powinniśmy rozważyć rozdzielenie interfejsu na mniejsze tak, aby każdy z nich deklarował tylko te funkcje, które rzeczywiście są wywoływane przez danego klienta lub grupę klientów (klasa/grupy klas implementujące dany interfejs).
+
+Opisany powyżej model eliminuje zależność obiektów klienckich od metod, których nie wywołują. Umożliwia to zapewnianie wzajemnej niezależności samych klientów.
+
+#### 5.   Zasada odwracania zależności (ang. Dependency Inversion Principle – DIP
+Zasada odwracania zależności składa się z dwóch następujących części:
+
+-    Moduły wysokopoziomowe nie powinny zależeć od modułów niskopoziomowych. Obie grupy modułów powinny zależeć od abstrakcji.
+-    Abstrakcje nie powinny zależeć od szczegółowych rozwiązań. To szczegółowe rozwiązania powinny zależeć od abstrakcji.
+
+Wydaje mi się, że powyższa definicja zasady odwracania zależności powinna być łatwa do zrozumienia.
+
+Zastanówmy się jednak przez chwile, jakie mogą być skutki zależności modułów wysokopoziomowych od niskopoziomowych, czyli co by się działo, gdybyśmy nie postępowali według pierwszej części definicji zasady odwracania zależności. Moduły wysokiego poziomu z natury rzeczy zawierają ważne decyzje strategiczne i modele biznesowe danej aplikacji. Myślę, że wszyscy się ze mną zgodzą, iż te właśnie moduły w największym stopniu odpowiadają za funkcjonowanie aplikacji. Gdyby okazało się, iż zależą one od modułów niskiego poziomu, to zmiany elementów niskiego poziomu mogłyby mieć wpływ na funkcjonowanie modułów wysokopoziomowych, a co za tym idzie wymuszałyby zmiany na wyższych poziomach. Dodatkowo, gdy moduły wysokopoziomowe zależą od niskopoziomowych, ponowne ich wykorzystanie staje się niezwykle trudne. Jeśli jednak odwrócimy tę zależność w drugą stronę, to bardzo łatwo będzie można wielokrotnie je wykorzystywać.
+
+Jeśli chodzi o zależność od abstrakcji, można to zamknąć w jednej prostej formule: pisany przez nas kod nie powinien być uzależniony od konkretnej klasy, zależności takie powinny kończyć się na klasach abstrakcyjnych bądź interfejsach. Zasadę zależności od abstrakcji (ang. depend on abstractions) można również streścić w trzech prostych punktach:
+
+-    Żadna zmienna nie powinna zawierać referencji do konkretnej klasy.
+-    Żadna klasa nie powinna dziedziczyć po konkretnej klasie.
+-    Żadna metoda nie powinna przykrywać metody zaimplementowanej w którejkolwiek z klas bazowych.
+
+Podstawowymi zaletami zasady odwracania zależności jest to, że właściwe jej stosowanie jest kluczowe, jeśli chcemy tworzyć frameworki wielokrotnego użytku. Ma ona również duży wpływ na odporność kodu źródłowego na przyszłe zmiany, ponieważ zgodnie z tą zasadą abstrakcje, a także szczegółowe mechanizmy są od siebie odizolowane, co z kolei wpływa na to, że tworzony kod jest dużo prostszy w konserwacji.
+
+
+
 
 
 
@@ -381,6 +443,7 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 ```Python
 (lambda x: x*2)(3)
 ```
+
 ## Django
 ### 1. Co to jest Django?
 http://django.pl/
