@@ -235,6 +235,11 @@ Jeśli chodzi o zależność od abstrakcji, można to zamknąć w jednej prostej
 
 Podstawowymi zaletami zasady odwracania zależności jest to, że właściwe jej stosowanie jest kluczowe, jeśli chcemy tworzyć frameworki wielokrotnego użytku. Ma ona również duży wpływ na odporność kodu źródłowego na przyszłe zmiany, ponieważ zgodnie z tą zasadą abstrakcje, a także szczegółowe mechanizmy są od siebie odizolowane, co z kolei wpływa na to, że tworzony kod jest dużo prostszy w konserwacji.
 
+### 13. Co to jest zasada DRY?
+https://pl.wikipedia.org/wiki/DRY
+
+Nie powtarzaj się to zasada, która mówi, że należy unikać powtarzania tych samych części kodu w różnych miejscach. Pozwala to na uniknięcie kopiowania lub kopiowania i delikatnego zmieniania części kodu w inne miejsca. Główną zaletą DRY (Don't repeat yourself) jest uniknięcie błędów popełnianych w trakcie kopiowania powtarzających się fragmentów kodu. Pozwala to zaoszczędzić czas, który tracimy, aby wprowadzić mało znaczące zmiany do kopiowanego kodu a następnie czas, który tracimy na szukanie zmian, które przeoczyliśmy w trakcie kopiowania. W zasadzie DRY chodzi również o unikanie powtórzeń czynności, które są wykonywane przez programistów. Takie czynności powinny być robione poprzez generatory kodu lub skrypt automatyzujące pracę. 
+
 
 
 
