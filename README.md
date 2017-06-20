@@ -462,6 +462,25 @@ Django powstało dla szybko rozwijającego się, dynamicznego portalu z newsami.
 
 Zasada DRY (ang. "Don't Repeat Yourself" - nie powtarzaj się) i automatyzacja możliwie wszystkiego to dwie główne domeny Django.
 
+### 3. Jakie znasz funkcje dostępne w Django?
+https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
+
+-    Interfejs administratora (CRUD)
+-    Templates
+-    Obsługa formularzy
+-    Zarządzanie użytkownikami, nadawanie uprawnienień
+-    Mapowanie obiektowo-relacyjne (ORM)
+-    Narzędzia do testowania
+-    Fantastyczna dokumentacja
+
+### 4. Opisz strukturę Django?
+https://docs.djangoproject.com/pl/1.11/
+
+-    Modele - opisują schemat bazy danych i strukturę danych
+-    Widoki - kontrolują to, co użytkownik widzi, widok pobiera dane z odpowiednich modeli i wykonuje obliczenia dokonane na danych i przekazuje je do szablonu
+-    Szablony: określają, w jaki sposób użytkownik widzi. Szablony opisują, jak dane otrzymane z widoków powinny zostać zmienione lub sformatowane do wyświetlania na stronie
+-    Kontroler: framework Django i analiza adresów URL
+
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
