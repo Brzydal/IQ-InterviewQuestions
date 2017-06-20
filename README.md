@@ -5,8 +5,9 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
 2. [Python](#python)
-3. [Bazy Danych](#bazy-danych)
-4. [Internet](#internet)
+3. [Django](#django)
+4. [Bazy Danych](#bazy-danych)
+5. [Internet](#internet)
 
 ## Pytania Ogólne:
 
@@ -380,6 +381,21 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 ```Python
 (lambda x: x*2)(3)
 ```
+## Django
+### 1. Co to jest Django?
+http://django.pl/
+https://pl.wikipedia.org/wiki/Django_(framework)
+
+>Framework webowy dla perfekcjonistów (z terminami)
+Django ułatwia szybsze tworzenie aplikacji webowych z mniejszą ilością kodu
+
+
+Django to webowy framework wysokiego poziomu napisany w Pythonie z myślą o szybkim rozwoju aplikacji, posiadający przejrzystą i pragmatyczną architekturę.
+
+Django powstało dla szybko rozwijającego się, dynamicznego portalu z newsami. Musiał się on zmierzyć z dwoma zadaniami: dotrzymywaniem krótkich terminów redakcji i spełnianiem surowych wymagań autorów -- doświadczonych developerów webowych. Django pozwala na budowanie wydajnych i eleganckich aplikacji internetowych w krótkim czasie.
+
+Zasada DRY (ang. "Don't Repeat Yourself" - nie powtarzaj się) i automatyzacja możliwie wszystkiego to dwie główne domeny Django.
+
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
