@@ -481,6 +481,19 @@ https://docs.djangoproject.com/pl/1.11/
 -    Szablony: określają, w jaki sposób użytkownik widzi. Szablony opisują, jak dane otrzymane z widoków powinny zostać zmienione lub sformatowane do wyświetlania na stronie
 -    Kontroler: framework Django i analiza adresów URL
 
+###5.Dlaczego warto używać Django do tworzenia stron WWW?
+
+-    Pozwala na dzielenie modułów kodu na grupy logiczne, aby z kolei umożliwić elastyczne zmiany w przyszłości.
+-    Ułatwia zarządzanie witryną, zapewniając automatycznie generowanego administratora.
+-    Dostarcza wstępnie pakiet API dla zwykłych zadań użytkownika.
+-    Daje system szablonów do definiowania HTMLa dla swojej strony internetowej (pozwala to na uniknięcie duplikowania kodu).
+-    Umożliwia określenie adresu URL dla danej funkcji.
+-    Umożliwia oddzielenie logiki biznesowej od HTML.
+-    Wszystko jest w Pythonie :)
+
+
+
+
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
