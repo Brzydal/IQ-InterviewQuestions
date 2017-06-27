@@ -511,6 +511,27 @@ https://docs.djangoproject.com/pl/1.11/
 -    Umożliwia oddzielenie logiki biznesowej od HTML.
 -    Wszystko jest w Pythonie :)
 
+### 6. Co to są Middleware?
+https://pl.wikipedia.org/wiki/Oprogramowanie_po%C5%9Brednicz%C4%85ce
+
+Middleware w Django to niskopoziomowy system "wtyczek" wpływających na dane przesyłane do i z aplikacji Django. Obrazując middleware to kod, który będzie automatycznie wykonywany przed/po wykonaniu widoku, przed wysłaniem odpowiedzi do klienta (przeglądarki) itp. Django posiada zestaw gotowych skryptów middleware opisanych w jego dokumentacji, lecz oprócz nich możemy również tworzyć własne skrypty middleware. Obsługa własnych klas middleware w aplikacjach Djangopozwala operować na nadpływających do widoku żądaniach HTTP, czy wynikach zwracanych przez te widoki.
+np.
+```Python
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'stats.statsMiddleware.statsMiddleware',)
+```
+#### Skrypty middleware moga być wykonywane w określonych okolicznościach - zależnie od zastosowanej metody middleware:
+
+-    process_request(self, request) - Ta metoda wykonywana jest przy każdym żądaniu zanim Django określi widok do wykonania. Powinna zwrócić None (Django będzie kontynuować wykonywanie kodu, widoku) lub HttpResponse - zwrócony zostanie podany obiekt HttpResponse.
+-    process_view(self, request, view_func, view_args, view_kwargs) - "view_func" to obiekt funkcji widoku jaki ma być wykonany, "view_arg" i "view_kwargs" zawierają argumenty jakie będą przekazane do widoku. Metoda ta zostanie wykonana przed samym wykonaniem widoku. Powinna zwrócić None (Django będzie kontynuować wykonywanie kodu, widoku) lub HttpResponse - zwrócony zostanie podany obiekt HttpResponse.
+-    process_response(self, request, response) - metoda ta musi zwrócić obiekt HttpResponse, czy to oryginalną odpowiedź "response" lub też inną określoną przez programistę.
+-    process_exception(self, request, exception) - "exception" to obiekt Exception. Metoda ta zostanie wykonana w przypadku wystąpienia wyjątku w widoku. Powinna zwrócić None (wtedy do przeglądarki zwrócony zostanie standardowy widok dla wyjątków) lub inny obiekt HttpResponse określony przez programistę.
+
+
 
 
 
