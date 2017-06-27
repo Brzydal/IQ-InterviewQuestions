@@ -447,6 +447,26 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 (lambda x: x*2)(3)
 ```
 
+### 10. Typowanie dynamiczne vs. statyczne
+
+https://pl.wikipedia.org/wiki/Typowanie_dynamiczne
+https://pl.wikipedia.org/wiki/Typowanie_statyczne
+
+Zalety:
+
+-    Łatwość programowania: dynamiczne typowanie pozwala programiście nie  przejmować się jeszcze jednym detalem przy pisaniu kodu i skupić się na ważniejszych aspektach (takich jak logiczna poprawność kodu). Tym samym może nawet przyczynić się do zmniejszenia ilości popełnianych błedów.
+-   Większą przejrzystość kodu: dzięki dynamicznemu typowaniu składnia języka programowania jest krótsza, bardziej zwięzła, np. z tego powodu Ruby i Python nie muszą uciekać sie do stosowania generyczności, która niekiedy sprawia, że kod jest nieczytelny i trudny do rozszyfrowania.
+-    Lepsze wsparcie dla zaawansowanych technik programowania jak: metaprogramowanie, deklaratywna składnia, języki dziedzinowe itp.
+-    Implementacje ORM i RPC są bardziej naturalne i łatwiejsze w użyciu w przypadku dynamicznych języków.
+-    Wsparcie dla "duck typing": dzięki luźniejszemu podejściu do interfejsów i struktur danych API często są potężniejsze, a sam kod  łatwiejszy w refaktoringu.
+
+Wady:
+
+-    Gorsza wydajność: w przypadku języków statycznych kompilator może wykorzystać wiedzę o typach do przeprowadzenia szerokiej gamy optymizacji.  Brak dynamicznego typowania jest prawdopodobnie podstawowym powodem, dla którego języki takie jak C i Java są dużo szybsze od Pythona i Rubiego.  Zaawansowane kompilatory dla języków dynamicznych ("tracing JIT", np. V8 lub PyPy) potrafią dokonywać optymizacji typowych dla języków statycznych, jednak narzut związany ze "śledzeniem" typów wciąz pozostaje.
+-    Jak wspomniałeś: mniej błędów wychwytywanych jest już przy kompilacji.  Nawet w przypadku języków dynamicznych możliwe jest jednak stworzenie narzędzi potrafiących wyłapać większość najczęstszych błędów bez wykonywania kodu.  Jednym z takich narzędzi jest np. pylint.
+
+
+
 ## Django
 ### 1. Co to jest Django?
 http://django.pl/
