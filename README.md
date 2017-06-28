@@ -465,6 +465,13 @@ Wady:
 -    Gorsza wydajność: w przypadku języków statycznych kompilator może wykorzystać wiedzę o typach do przeprowadzenia szerokiej gamy optymizacji.  Brak dynamicznego typowania jest prawdopodobnie podstawowym powodem, dla którego języki takie jak C i Java są dużo szybsze od Pythona i Rubiego.  Zaawansowane kompilatory dla języków dynamicznych ("tracing JIT", np. V8 lub PyPy) potrafią dokonywać optymizacji typowych dla języków statycznych, jednak narzut związany ze "śledzeniem" typów wciąz pozostaje.
 -    Jak wspomniałeś: mniej błędów wychwytywanych jest już przy kompilacji.  Nawet w przypadku języków dynamicznych możliwe jest jednak stworzenie narzędzi potrafiących wyłapać większość najczęstszych błędów bez wykonywania kodu.  Jednym z takich narzędzi jest np. pylint.
 
+### 11. Jaka jest różnica między range() i xrange()?
+https://code-maven.com/range-vs-xrange-in-python
+
+Różnica polega na tym, że range() zwraca listę,a xrange() zwraca iterator, więc jest wydajniejsze.
+Od Pythona 3.0 nie ma xrange(), a range zwraca iterator.
+
+
 
 
 ## Django
