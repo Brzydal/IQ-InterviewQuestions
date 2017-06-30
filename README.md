@@ -245,6 +245,17 @@ http://czas.ebiznes.org.pl/KISS.htm
 
 Celem tej zasady jest utrzymanie kodu, tak by był on prosty i zrozumiały. Unikając jakichkolwiek niepotrzebnych skomplikowanych zapisów. Zasada ta kieruje postępowanie na skuteczną prostą drogę. Załóżmy, że podczas projektowania strony internetowej poświęcamy dużo rzeczy na kompletnie nie istotne jej części. Zadaniem informacyjnej strony internetowej powinno być dostarczanie informacji, wg zasady KISS powinna być ona prosta i aż głupia w swojej prostocie. Podczas gdy często możemy zaobserwować, kompletnie nie potrzebny stopień skomplikowania, dodatkowe "bajery" kompletnie nikomu nie potrzebne. Projekt powinien być prosty i łatwy w użyciu, poprostu KISS (bo działa)!
 
+### 15. Co to jest API?
+https://pl.wikipedia.org/wiki/Application_Programming_Interface
+
+API - Application Programming Interface (ang. Interfejs Programowania Aplikacji) - Pozwala na komunikowanie się aplikacji między sobą (np. twojego programu z systemem operacyjnym). Zdefiniowane jest na poziomie kodu źródłowego (np. biblioteka dla danego języka programowania). Zadaniem API jest dostarczenie odpowiednich specyfikacji podprogramów (np. funkcji w bibliotece), struktur danych (np. co zawiera dana tablica), klas obiektów (definiują obiekt w j. programowania) i wymaganych protokołów komunikacyjnych (np. http).
+
+Na chłopski rozum można powiedzieć, że API pozwala na korzystanie z funkcjonalności udostępnianych przez inną aplikację w twojej aplikacji. Przykładem jest Windows API, które pozwala na tworzenie aplikacji korzystających z możliwości, które oferuje Windows (np. w C++ możesz otworzyć okno za pomocą funkcji zdefiniowanej przez API). Gdy grałeś w gry to zapewne obiła się tobie o uszy nazwa DirectX lub OpenGL. To są biblioteki, dzięki którym można tworzyć aplikacje 2D i 3D w językach programowania, a one już standardowo komunikują się z kartą graficzną. Jest to duże ułatwienie, ponieważ API jakim jest DirectX i OpenGL pozwala na jednakowe pisanie programów pod różne karty graficzne (producenci muszą się dostosować).
+
+API często ma zastosowanie w aplikacjach sieciowych. Prostym przykładem może być pobieranie tweetów z twittera za pomocą Twitter API. W swoim programie piszesz zapytanie HTTP na odpowiedni adres i otrzymujesz upragnione tweety danej osoby.
+
+API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiązywania problemów przez co mogą powstawać społeczności, które będą ulepszać już powstałe koło i pomagać innym, chcącym zrozumieć działanie tego koła.
+
 
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
