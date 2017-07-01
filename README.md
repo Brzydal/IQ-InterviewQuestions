@@ -4,7 +4,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
-    * [Czym się różni wątek od procesu?](#1.-czym-się-różni-wątek-od-procesu?)
+    * [Czym się różni wątek od procesu?](#abcd)
 2. [Python](#python)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
@@ -12,7 +12,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 ## Pytania Ogólne:
 
-### 1. Czym się różni wątek od procesu?
+### 1. Czym się różni wątek od procesu? <a name="abcd"></a>
  http://www.zsoiz.home.pl/pliki/Procesy.htm
 
 - Proces - jedno z najbardziej podstawowych pojęć w informatyce, definiowane jako egzemplarz wykonywanego programu, jednak każdy nowo powstały proces otrzymuje unikalny numer, który go jednoznacznie identyfikuje, tzw. numer PID (ang. process IDentifier).
