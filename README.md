@@ -4,7 +4,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
-  * [Czym się różni wątek od procesu?](#czym-się-różni-wątek-od-procesu?)
+    * [Czym się różni wątek od procesu?](#czym-się-różni-wątek-od-procesu)
 2. [Python](#python)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
@@ -26,7 +26,8 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
     - Wątki wymagają mniej zasobów do działania i też mniejszy jest czas ich tworzenia.
     - Dzięki współdzieleniu przestrzeni adresowej (pamięci) wątki jednego zadania mogą się między sobą komunikować w bardzo łatwy sposób, niewymagający pomocy ze strony systemu operacyjnego. Przekazanie dowolnie dużej ilości danych wymaga przesłania jedynie wskaźnika, zaś odczyt (a niekiedy zapis) danych o rozmiarze nie większym od słowa maszynowego nie wymaga synchronizacji (procesor gwarantuje atomowość takiej operacji).
-    [Spis Treści](#spis-tresci)
+
+    [Spis Treści](#spis-treści)
 
 ### 2. Co to jest projektowanie obiektowe?
 https://pl.wikipedia.org/wiki/Programowanie_obiektowe
