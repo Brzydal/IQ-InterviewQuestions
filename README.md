@@ -4,7 +4,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
-  1.1. [Czym się różni wątek od procesu?](ble)
+  1. [Czym się różni wątek od procesu?](Czym się różni wątek od procesu?)
 2. [Python](#python)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
