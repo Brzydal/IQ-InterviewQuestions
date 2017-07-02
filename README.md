@@ -4,7 +4,8 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
-    * [Czym się różni wątek od procesu?](#abcd)
+    * [Czym się różni wątek od procesu?](#question1.1)
+    * [Co to jest projektowanie obiektowe?](#question1.2)
 2. [Python](#python)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
@@ -12,7 +13,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 ## Pytania Ogólne:
 
-### 1. Czym się różni wątek od procesu? <a name="abcd"></a>
+### 1. Czym się różni wątek od procesu? <a name="guestion1.1"></a>
  http://www.zsoiz.home.pl/pliki/Procesy.htm
 
 - Proces - jedno z najbardziej podstawowych pojęć w informatyce, definiowane jako egzemplarz wykonywanego programu, jednak każdy nowo powstały proces otrzymuje unikalny numer, który go jednoznacznie identyfikuje, tzw. numer PID (ang. process IDentifier).
@@ -29,7 +30,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
     [Spis Treści](#spis-treści)
 
-### 2. Co to jest projektowanie obiektowe?
+### 2. Co to jest projektowanie obiektowe?<a name="guestion1.2"></a>
 https://pl.wikipedia.org/wiki/Programowanie_obiektowe
 
 Programowanie obiektowe (ang. object-oriented programming) – paradygmat programowania, w którym programy definiuje się za pomocą obiektów – elementów łączących stan (czyli dane, nazywane najczęściej polami) i zachowanie (czyli procedury, tu: metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań. Podejście to różni się od tradycyjnego programowania proceduralnego, gdzie dane i procedury nie są ze sobą bezpośrednio związane. Programowanie obiektowe ma ułatwić pisanie, konserwację i wielokrotne użycie programów lub ich fragmentów. Największym atutem programowania, projektowania oraz analizy obiektowej jest zgodność takiego podejścia z rzeczywistością – mózg ludzki jest w naturalny sposób najlepiej przystosowany do takiego podejścia przy przetwarzaniu informacji.
@@ -43,6 +44,8 @@ Podstawowe założenia paradygmatu obiektowego:
  - Polimorfizm - referencje i kolekcje obiektów mogą dotyczyć obiektów różnego typu, a wywołanie metody dla referencji spowoduje zachowanie odpowiednie dla pełnego typu obiektu wywoływanego. Jeśli dzieje się to w czasie działania programu, to nazywa się to późnym wiązaniem lub wiązaniem dynamicznym. Niektóre języki udostępniają bardziej statyczne (w trakcie kompilacji) rozwiązania polimorfizmu – na przykład szablony i przeciążanie operatorów w C++.
 
  - Dziedziczenie - porządkuje i wspomaga polimorfizm i enkapsulację dzięki umożliwieniu definiowania i tworzenia specjalizowanych obiektów na podstawie bardziej ogólnych. Dla obiektów specjalizowanych nie trzeba redefiniować całej funkcjonalności, lecz tylko tę, której nie ma obiekt ogólniejszy. W typowym przypadku powstają grupy obiektów zwane klasami, oraz grupy klas zwane drzewami. Odzwierciedlają one wspólne cechy obiektów.
+
+ [Spis Treści](#spis-treści)
 
 ### 3. Co to jest wzorzec projektowy?
 https://pl.wikipedia.org/wiki/Wzorzec_projektowy_(informatyka)
