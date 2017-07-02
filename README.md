@@ -4,9 +4,9 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 # Spis Treści
 1. [Pytania Ogólne](#pytania-ogólne)
-    * [Czym się różni wątek od procesu?](#question1-1)
-    * [Co to jest projektowanie obiektowe?](#question1-2)
-    * [Co to jest wzorzec projektowy?](#abcd)
+    * [Czym się różni wątek od procesu?](#question1.1)
+    * [Co to jest projektowanie obiektowe?](#question1.2)
+    * [Co to jest wzorzec projektowy?](#question1.3)
 2. [Python](#python)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
@@ -14,7 +14,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
 ## Pytania Ogólne:
 
-### 1. Czym się różni wątek od procesu? <a name="guestion1-1"></a>
+### 1. Czym się różni wątek od procesu? <a name="question1.1"></a>
  http://www.zsoiz.home.pl/pliki/Procesy.htm
 
 - Proces - jedno z najbardziej podstawowych pojęć w informatyce, definiowane jako egzemplarz wykonywanego programu, jednak każdy nowo powstały proces otrzymuje unikalny numer, który go jednoznacznie identyfikuje, tzw. numer PID (ang. process IDentifier).
@@ -31,7 +31,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 
     [Spis Treści](#spis-treści)
 
-### 2. Co to jest projektowanie obiektowe?<a name="guestion1-2"></a>
+### 2. Co to jest projektowanie obiektowe?<a name="question1.2"></a>
 https://pl.wikipedia.org/wiki/Programowanie_obiektowe
 
 Programowanie obiektowe (ang. object-oriented programming) – paradygmat programowania, w którym programy definiuje się za pomocą obiektów – elementów łączących stan (czyli dane, nazywane najczęściej polami) i zachowanie (czyli procedury, tu: metody). Obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań. Podejście to różni się od tradycyjnego programowania proceduralnego, gdzie dane i procedury nie są ze sobą bezpośrednio związane. Programowanie obiektowe ma ułatwić pisanie, konserwację i wielokrotne użycie programów lub ich fragmentów. Największym atutem programowania, projektowania oraz analizy obiektowej jest zgodność takiego podejścia z rzeczywistością – mózg ludzki jest w naturalny sposób najlepiej przystosowany do takiego podejścia przy przetwarzaniu informacji.
@@ -48,7 +48,7 @@ Podstawowe założenia paradygmatu obiektowego:
 
  [Spis Treści](#spis-treści)
 
-### 3. Co to jest wzorzec projektowy?<a name="abcd"></a>
+### 3. Co to jest wzorzec projektowy?<a name="question1.2"></a>
 https://pl.wikipedia.org/wiki/Wzorzec_projektowy_(informatyka)
 
 Wzorzec projektowy (ang. design pattern) – uniwersalne, sprawdzone w praktyce rozwiązanie często pojawiających się, powtarzalnych problemów projektowych. Pokazuje powiązania i zależności pomiędzy klasami oraz obiektami i ułatwia tworzenie, modyfikację oraz pielęgnację kodu źródłowego. Jest opisem rozwiązania, a nie jego implementacją. Wzorce projektowe stosowane są w projektach wykorzystujących programowanie obiektowe.
