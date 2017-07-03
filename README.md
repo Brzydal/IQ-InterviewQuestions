@@ -70,6 +70,9 @@ Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping ORM) – sposób o
 
 Implementacja takiego odwzorowania stosowana jest między innymi w przypadku, gdy tworzony system oparty jest na podejściu obiektowym, a system bazy danych operuje na relacjach. Z ORM związany jest szereg problemów wydajnościowych.
 
+[Spis Treści](#spis-treści)
+
+
 ### 6. Co to są wyrażenia regularne?
 http://grabun.pl/wyrazenia-regularne/
 
@@ -80,6 +83,8 @@ Za pomocą wyrażeń regularnych (ang. regular expressions albo w skrócie regex
 [a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,4}
 ```
 można próbować sprawdzać poprawność wpisanego w formularz adresu e-mail.
+
+[Spis Treści](#spis-treści)
 
 ### 7. Co to jest rekurencja i kiedy warto jej używać ?
 https://pl.wikipedia.org/wiki/Rekurencja
@@ -113,6 +118,8 @@ I wtedy wracamy do __main__. Całe wyjście wygląda tak:
 1
 Odpalamy!
 
+[Spis Treści](#spis-treści)
+
 #### 8. Jakie znasz paradygmaty programowania ?
 https://pl.wikipedia.org/wiki/Paradygmat_programowania
 
@@ -135,6 +142,8 @@ Paradygmat programowania definiuje sposób patrzenia programisty na przepływ st
 
 Różne języki programowania mogą wspierać różne paradygmaty programowania. Przykładowo, Smalltalk i Java są ściśle zaprojektowane dla potrzeb programowania obiektowego, natomiast Haskell jest językiem funkcyjnym. Istnieją także języki wspierające kilka paradygmatów, np. Common Lisp oraz Python.
 
+[Spis Treści](#spis-treści)
+
 #### 9. Co to jest wstrzykiwanie zależności ?
 http://devstyle.pl/2014/05/26/kilka-postw-o-dependency-injection/
 
@@ -149,6 +158,8 @@ W rozbudowanych implementacjach fabryka może wykonywać czynności dodatkowe, n
 DI jest sposobem osiągnięcia luźnych powiązań (ang. loose coupling).
 
 Użycie tej techniki pozwala tworzyć łatwo testowalne obiekty. Sprawdza się szczególnie w powiązaniu z programowaniem sterowanym testami (ang. test-driven development). Polega ono w skrócie na następującym tworzeniu oprogramowania: opracowujemy interfejsy (diagram klas), opracowujemy testy jednostkowe, które testują funkcjonalność interfejsu (w jaki sposób przetestować, czy działanie jest poprawne), a dopiero później piszemy implementację. Unikanie zależności od konkretnych implementacji współpracujących klas, a bazowanie tylko na interfejsach umożliwia tworzenie kontrolowanych testów - jesteśmy w stanie skupić się wyłącznie na funkcjonalności wybranej klasy; zwłaszcza, gdy wykorzystamy obiekty-zaślepki (ang. mock-objects, proste pseudoimplementacje, używane w celu testowania). DI pozwala wstrzyknąć do obiektów testowanych zależności od obiektów-zaślepek. W środowisku produkcyjnym do obiektów tych wstrzykiwane są zależności od prawdziwych obiektów.
+
+[Spis Treści](#spis-treści)
 
 #### 10. Jakie znasz drzewa i jakie operacje można na nich wykonać ?
 https://pl.wikipedia.org/wiki/Drzewo_(informatyka)
@@ -169,6 +180,8 @@ Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawęd
 - dodanie nowego elementu w określonym miejscu drzewa,
 - usunięcie elementu.
 
+[Spis Treści](#spis-treści)
+
 #### 11. Co to są testy jednostkowe?
 https://pl.wikipedia.org/wiki/Test_jednostkowy
 http://devstyle.pl/2011/08/11/ut-1-co-to-sa-testy-i-po-co-sa-testy-jednostkowe/
@@ -183,6 +196,8 @@ Testy można podzielić na następujące warianty:
 -    użycie klas równoważności
 -    testowanie wartości brzegowych
 -    testowanie składniowe
+
+[Spis Treści](#spis-treści)
 
 ### 12. Co to jest SOLID?
 https://www.p-programowanie.pl/paradygmaty-programowania/zasady-solid/
@@ -244,15 +259,21 @@ Jeśli chodzi o zależność od abstrakcji, można to zamknąć w jednej prostej
 
 Podstawowymi zaletami zasady odwracania zależności jest to, że właściwe jej stosowanie jest kluczowe, jeśli chcemy tworzyć frameworki wielokrotnego użytku. Ma ona również duży wpływ na odporność kodu źródłowego na przyszłe zmiany, ponieważ zgodnie z tą zasadą abstrakcje, a także szczegółowe mechanizmy są od siebie odizolowane, co z kolei wpływa na to, że tworzony kod jest dużo prostszy w konserwacji.
 
+[Spis Treści](#spis-treści)
+
 ### 13. Co to jest zasada DRY?
 https://pl.wikipedia.org/wiki/DRY
 
 Nie powtarzaj się to zasada, która mówi, że należy unikać powtarzania tych samych części kodu w różnych miejscach. Pozwala to na uniknięcie kopiowania lub kopiowania i delikatnego zmieniania części kodu w inne miejsca. Główną zaletą DRY (Don't repeat yourself) jest uniknięcie błędów popełnianych w trakcie kopiowania powtarzających się fragmentów kodu. Pozwala to zaoszczędzić czas, który tracimy, aby wprowadzić mało znaczące zmiany do kopiowanego kodu a następnie czas, który tracimy na szukanie zmian, które przeoczyliśmy w trakcie kopiowania. W zasadzie DRY chodzi również o unikanie powtórzeń czynności, które są wykonywane przez programistów. Takie czynności powinny być robione poprzez generatory kodu lub skrypt automatyzujące pracę.
 
+[Spis Treści](#spis-treści)
+
 ### 14. Co to jest zasada KISS?
 http://czas.ebiznes.org.pl/KISS.htm
 
 Celem tej zasady jest utrzymanie kodu, tak by był on prosty i zrozumiały. Unikając jakichkolwiek niepotrzebnych skomplikowanych zapisów. Zasada ta kieruje postępowanie na skuteczną prostą drogę. Załóżmy, że podczas projektowania strony internetowej poświęcamy dużo rzeczy na kompletnie nie istotne jej części. Zadaniem informacyjnej strony internetowej powinno być dostarczanie informacji, wg zasady KISS powinna być ona prosta i aż głupia w swojej prostocie. Podczas gdy często możemy zaobserwować, kompletnie nie potrzebny stopień skomplikowania, dodatkowe "bajery" kompletnie nikomu nie potrzebne. Projekt powinien być prosty i łatwy w użyciu, poprostu KISS (bo działa)!
+
+[Spis Treści](#spis-treści)
 
 ### 15. Co to jest API?
 https://pl.wikipedia.org/wiki/Application_Programming_Interface
@@ -265,6 +286,7 @@ API często ma zastosowanie w aplikacjach sieciowych. Prostym przykładem może 
 
 API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiązywania problemów przez co mogą powstawać społeczności, które będą ulepszać już powstałe koło i pomagać innym, chcącym zrozumieć działanie tego koła.
 
+[Spis Treści](#spis-treści)
 
 ## Python
 ### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
