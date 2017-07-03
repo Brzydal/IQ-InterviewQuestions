@@ -7,7 +7,19 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     * [Czym się różni wątek od procesu?](#question1.1)
     * [Co to jest projektowanie obiektowe?](#question1.2)
     * [Co to jest wzorzec projektowy?](#question1.3)
+    * [Co to jest ORM?](#question1.4)
+    * [Co to są wyrażenia regularne?](#question1.5)
+    * [Co to jest rekurencja i kiedy warto jej używać?](#question1.6)
+    * [Jakie znasz paradygmaty programowania?](#question1.7)
+    * [Co to jest wstrzykiwanie zależności?](#question1.8)
+    * [Jakie znasz drzewa i jakie operacje można na nich wykonać?](#question1.9)
+    * [Co to są testy jednostkowe?](#question1.10)
+    * [Co to jest SOLID?](#question1.11)
+    * [Co to jest zasada DRY?](#question1.12)
+    * [Co to jest zasada KISS?](#question1.13)
+    * [Co to jest API?](#question1.14)
 2. [Python](#python)
+    * [](#question2.1)
 3. [Django](#django)
 4. [Bazy Danych](#bazy-danych)
 5. [Internet](#internet)
@@ -63,7 +75,7 @@ Model-View-Controller zakłada podział aplikacji na trzy główne części:
 
 [Spis Treści](#spis-treści)
 
-### 4. Co to jest ORM?
+### 4. Co to jest ORM? <a name="question1.4"></a>
 https://en.wikipedia.org/wiki/Object-relational_mapping
 
 Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping ORM) – sposób odwzorowania obiektowej architektury systemu informatycznego na bazę danych (lub inny element systemu) o relacyjnym charakterze.
@@ -73,7 +85,7 @@ Implementacja takiego odwzorowania stosowana jest między innymi w przypadku, gd
 [Spis Treści](#spis-treści)
 
 
-### 6. Co to są wyrażenia regularne?
+### 5. Co to są wyrażenia regularne? <a name="question1.5"></a>
 http://grabun.pl/wyrazenia-regularne/
 
 Za pomocą wyrażeń regularnych (ang. regular expressions albo w skrócie regexp) można opisywać pewne skomplikowane wzorce wyszukiwania na przykład treści dokumentów.
@@ -86,7 +98,7 @@ można próbować sprawdzać poprawność wpisanego w formularz adresu e-mail.
 
 [Spis Treści](#spis-treści)
 
-### 7. Co to jest rekurencja i kiedy warto jej używać ?
+### 6. Co to jest rekurencja i kiedy warto jej używać? <a name="question1.6"></a>
 https://pl.wikipedia.org/wiki/Rekurencja
 
  Jedna funkcja może wywołać inną. Funkcja może wywołać nawet samą siebie. Może nie być oczywiste, dlaczego to jest dobra rzecz, ale okazuje się, że to jedna z najbardziej magicznych rzeczy, które program może zrobić. Na przykład, spójrz na poniższą funkcję:
@@ -120,7 +132,7 @@ Odpalamy!
 
 [Spis Treści](#spis-treści)
 
-#### 8. Jakie znasz paradygmaty programowania ?
+#### 7. Jakie znasz paradygmaty programowania ? <a name="question1.7"></a>
 https://pl.wikipedia.org/wiki/Paradygmat_programowania
 
    - programowanie proceduralne
@@ -144,7 +156,7 @@ Różne języki programowania mogą wspierać różne paradygmaty programowania.
 
 [Spis Treści](#spis-treści)
 
-#### 9. Co to jest wstrzykiwanie zależności ?
+#### 8. Co to jest wstrzykiwanie zależności? <a name="question1.8"></a>
 http://devstyle.pl/2014/05/26/kilka-postw-o-dependency-injection/
 
 Wstrzykiwanie zależności (ang. Dependency Injection, DI) – wzorzec projektowy i wzorzec architektury oprogramowania polegający na usuwaniu bezpośrednich zależności pomiędzy komponentami na rzecz architektury typu plug-in. Polega na przekazywaniu gotowych, utworzonych instancji obiektów udostępniających swoje metody i właściwości obiektom, które z nich korzystają (np. jako parametry konstruktora). Stanowi alternatywę do podejścia, gdzie obiekty tworzą instancję obiektów, z których korzystają np. we własnym konstruktorze.
@@ -161,7 +173,7 @@ Użycie tej techniki pozwala tworzyć łatwo testowalne obiekty. Sprawdza się s
 
 [Spis Treści](#spis-treści)
 
-#### 10. Jakie znasz drzewa i jakie operacje można na nich wykonać ?
+#### 9. Jakie znasz drzewa i jakie operacje można na nich wykonać ? <a name="question1.9"></a>
 https://pl.wikipedia.org/wiki/Drzewo_(informatyka)
 http://eduinf.waw.pl/inf/alg/001_search/0108.php
 
@@ -182,7 +194,7 @@ Drzewa składają się z wierzchołków (węzłów) oraz łączących je krawęd
 
 [Spis Treści](#spis-treści)
 
-#### 11. Co to są testy jednostkowe?
+#### 10. Co to są testy jednostkowe? <a name="question1.10"></a>
 https://pl.wikipedia.org/wiki/Test_jednostkowy
 http://devstyle.pl/2011/08/11/ut-1-co-to-sa-testy-i-po-co-sa-testy-jednostkowe/
 
@@ -199,7 +211,7 @@ Testy można podzielić na następujące warianty:
 
 [Spis Treści](#spis-treści)
 
-### 12. Co to jest SOLID?
+### 11. Co to jest SOLID? <a name="question1.11"></a>
 https://www.p-programowanie.pl/paradygmaty-programowania/zasady-solid/
 https://sii.pl/blog/solid-dobre-praktyki-programowania/
 
@@ -261,21 +273,21 @@ Podstawowymi zaletami zasady odwracania zależności jest to, że właściwe jej
 
 [Spis Treści](#spis-treści)
 
-### 13. Co to jest zasada DRY?
+### 12. Co to jest zasada DRY? <a name="question1.12"></a>
 https://pl.wikipedia.org/wiki/DRY
 
 Nie powtarzaj się to zasada, która mówi, że należy unikać powtarzania tych samych części kodu w różnych miejscach. Pozwala to na uniknięcie kopiowania lub kopiowania i delikatnego zmieniania części kodu w inne miejsca. Główną zaletą DRY (Don't repeat yourself) jest uniknięcie błędów popełnianych w trakcie kopiowania powtarzających się fragmentów kodu. Pozwala to zaoszczędzić czas, który tracimy, aby wprowadzić mało znaczące zmiany do kopiowanego kodu a następnie czas, który tracimy na szukanie zmian, które przeoczyliśmy w trakcie kopiowania. W zasadzie DRY chodzi również o unikanie powtórzeń czynności, które są wykonywane przez programistów. Takie czynności powinny być robione poprzez generatory kodu lub skrypt automatyzujące pracę.
 
 [Spis Treści](#spis-treści)
 
-### 14. Co to jest zasada KISS?
+### 13. Co to jest zasada KISS? <a name="question1.13"></a>
 http://czas.ebiznes.org.pl/KISS.htm
 
 Celem tej zasady jest utrzymanie kodu, tak by był on prosty i zrozumiały. Unikając jakichkolwiek niepotrzebnych skomplikowanych zapisów. Zasada ta kieruje postępowanie na skuteczną prostą drogę. Załóżmy, że podczas projektowania strony internetowej poświęcamy dużo rzeczy na kompletnie nie istotne jej części. Zadaniem informacyjnej strony internetowej powinno być dostarczanie informacji, wg zasady KISS powinna być ona prosta i aż głupia w swojej prostocie. Podczas gdy często możemy zaobserwować, kompletnie nie potrzebny stopień skomplikowania, dodatkowe "bajery" kompletnie nikomu nie potrzebne. Projekt powinien być prosty i łatwy w użyciu, poprostu KISS (bo działa)!
 
 [Spis Treści](#spis-treści)
 
-### 15. Co to jest API?
+### 14. Co to jest API? <a name="question1.14"></a>
 https://pl.wikipedia.org/wiki/Application_Programming_Interface
 
 API - Application Programming Interface (ang. Interfejs Programowania Aplikacji) - Pozwala na komunikowanie się aplikacji między sobą (np. twojego programu z systemem operacyjnym). Zdefiniowane jest na poziomie kodu źródłowego (np. biblioteka dla danego języka programowania). Zadaniem API jest dostarczenie odpowiednich specyfikacji podprogramów (np. funkcji w bibliotece), struktur danych (np. co zawiera dana tablica), klas obiektów (definiują obiekt w j. programowania) i wymaganych protokołów komunikacyjnych (np. http).
