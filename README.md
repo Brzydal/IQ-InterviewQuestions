@@ -550,6 +550,8 @@ Django powstało dla szybko rozwijającego się, dynamicznego portalu z newsami.
 
 Zasada DRY (ang. "Don't Repeat Yourself" - nie powtarzaj się) i automatyzacja możliwie wszystkiego to dwie główne domeny Django.
 
+[Spis Treści](#spis-treści)
+
 ### 3. Jakie znasz funkcje dostępne w Django?
 https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 
@@ -561,6 +563,8 @@ https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 -    Narzędzia do testowania
 -    Fantastyczna dokumentacja
 
+[Spis Treści](#spis-treści)
+
 ### 4. Opisz strukturę Django?
 https://docs.djangoproject.com/pl/1.11/
 
@@ -568,6 +572,8 @@ https://docs.djangoproject.com/pl/1.11/
 -    Widoki - kontrolują to, co użytkownik widzi, widok pobiera dane z odpowiednich modeli i wykonuje obliczenia dokonane na danych i przekazuje je do szablonu
 -    Szablony: określają, w jaki sposób użytkownik widzi. Szablony opisują, jak dane otrzymane z widoków powinny zostać zmienione lub sformatowane do wyświetlania na stronie
 -    Kontroler: framework Django i analiza adresów URL
+
+[Spis Treści](#spis-treści)
 
 ###5.Dlaczego warto używać Django do tworzenia stron WWW?
 
@@ -578,6 +584,8 @@ https://docs.djangoproject.com/pl/1.11/
 -    Umożliwia określenie adresu URL dla danej funkcji.
 -    Umożliwia oddzielenie logiki biznesowej od HTML.
 -    Wszystko jest w Pythonie :)
+
+[Spis Treści](#spis-treści)
 
 ### 6. Co to są Middleware?
 https://pl.wikipedia.org/wiki/Oprogramowanie_po%C5%9Brednicz%C4%85ce
@@ -599,16 +607,15 @@ MIDDLEWARE_CLASSES = (
 -    process_response(self, request, response) - metoda ta musi zwrócić obiekt HttpResponse, czy to oryginalną odpowiedź "response" lub też inną określoną przez programistę.
 -    process_exception(self, request, exception) - "exception" to obiekt Exception. Metoda ta zostanie wykonana w przypadku wystąpienia wyjątku w widoku. Powinna zwrócić None (wtedy do przeglądarki zwrócony zostanie standardowy widok dla wyjątków) lub inny obiekt HttpResponse określony przez programistę.
 
-
-
-
-
+[Spis Treści](#spis-treści)
 
 ## Bazy Danych
 ### 1. Co to jest SQL?
 https://pl.wikipedia.org/wiki/SQL
 
 SQL (ang. Structured Query Language wym. /ɛskjuːˈɛl/) – strukturalny język zapytań używany do tworzenia, modyfikowania baz danych oraz do umieszczania i pobierania danych z baz danych.
+
+[Spis Treści](#spis-treści)
 
 ### 2. Jak i kiedy stosować indeksy w bazach danych?
 https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-i-jak-je-stosowac.aspx
@@ -631,6 +638,8 @@ https://msdn.microsoft.com/pl-pl/library/baza-danych-sql-server--indeksy--kiedy-
 
 - Różnica - wyobraźmy sobie zapytanie, które ma wybrać dane z 15 tabel, z których największa ma np. milion rekordów. Przypuszczam, że operacja wyszukiwania będzie trwała ok. 5 minut. Po założeniu indeksu na tej największej tabeli czas wykonywania zapytania może się skrócić nawet o 10 razy.
 
+[Spis Treści](#spis-treści)
+
 ### 3. Jaka jest różnica między widokiem (View), a tabelą (Table)?
 https://pl.wikipedia.org/wiki/Widok_(bazy_danych)
 https://pl.wikipedia.org/wiki/Tabela_(bazy_danych)
@@ -651,6 +660,8 @@ Tabela (relacja) – wydzielony logicznie zbiór danych, zorganizowanych w formi
 
 Pojedyncza tabela może być reprezentacją pewnej encji (np. książek, mieszkań, ludzi), relacji między nimi, albo może stanowić zawartość całej bazy danych. Pojedynczy wiersz tabeli nazywany jest rekordem i stanowi najczęściej zbiór danych o pojedynczym obiekcie (ew. grupie obiektów).
 
+[Spis Treści](#spis-treści)
+
 ### 4. Jakie znasz relacje w bazach danych
 http://www.teacher.webd.pl/kurs_mysql/k_2_2_3.php
 
@@ -662,6 +673,8 @@ http://www.teacher.webd.pl/kurs_mysql/k_2_2_3.php
 
  -  #### Relacja wiele do wielu
     Relacja wiele do wielu pomiędzy tabelami A i B występuje wtedy, gdy pojedynczemu rekordowi z tabeli A jest przyporządkowany jeden lub wielu rekordów z tabeli B, i na odwrót - pojedynczemu rekordowi z tabeli B jest przyporządkowany jeden lub wielu rekordów A. Taką sytuację będziemy mieli w realcji nauczycieli do uczniów. Każdy nauczyciel uczy wielu uczniów, natomiast każdego ucznia uczą różni nauczyciele.
+
+[Spis Treści](#spis-treści)
 
 ## Internet
 
@@ -676,6 +689,8 @@ Internet - to połączone ze sobą tysiące sieci działające według odmiennyc
 - Sieć  jest  „głupia”  –  zajmuje  się  przesyłaniem  pakietów,  dzięki  czemu  robi  to  szybko i efektywnie.
 - „Mądrość”  i  zaawansowane  funkcje  zlokalizowane  są  w urządzeniach  końcowych (komputery, serwery itp.) i aplikacjach na nich uruchamianych. Dzięki schematowi „głupia sieć – mądre urządzenie końcowe”, czyli zasadzie
 end-to-end, Internet jest otwartą platformą dla innowacji, nowych aplikacji i zastosowań.
+
+[Spis Treści](#spis-treści)
 
 ### 2. Jakie znasz protokoły internetowe?
 https://pl.wikipedia.org/wiki/Protok%C3%B3%C5%82_komunikacyjny#Protoko.C5.82y_internetowe
@@ -700,12 +715,16 @@ Poniżej wyszczególniono niektóre, popularne protokoły komunikacyjne wraz z n
 
 Osobną klasą protokołów komunikacyjnych są protokoły do komunikacji grupowej (multicast), używane m.in. do transmisji telewizyjnych przez Internet, telekonferencji itp. Przykładami takich protokołów są RMTP (Reliable Multicast Transport Protocol), TOTEM, XTP, Muse i inne.
 
+[Spis Treści](#spis-treści)
+
 ### 3. Co to jest DNS?
 https://pl.wikipedia.org/wiki/Domain_Name_System
 
 Domain Name System (DNS, pol. „system nazw domenowych”) – system serwerów, protokół komunikacyjny oraz usługa obsługująca rozproszoną bazę danych adresów sieciowych. Pozwala na zamianę adresów znanych użytkowników Internetu na adresy zrozumiałe dla urządzeń tworzących sieć komputerową. Dzięki DNS nazwa mnemoniczna, np. pl.wikipedia.org jest tłumaczona na odpowiadający jej adres IP, czyli 91.198.174.192.
 
 DNS to złożony system komputerowy oraz prawny. Zapewnia z jednej strony rejestrację nazw domen internetowych i ich powiązanie z numerami IP. Z drugiej strony realizuje bieżącą obsługę komputerów odnajdujących adresy IP odpowiadające poszczególnym nazwom. Jest nieodzowny do działania prawie wszystkich usług sieci Internet.
+
+[Spis Treści](#spis-treści)
 
 ### 4. Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres?
 https://youtu.be/M2wvvLmRkwo
@@ -726,6 +745,8 @@ Na początku serwer aplikacji analizuje adres URI – bierze jego pierwszy segme
 W przypadku aplikacji napisanych z użyciem Spring’a, wszystkie zapytania (najczęściej) trafiają do jednego obiektu typu DispatcherServlet, który na podstawie adnotacji nad kontrolerami, plików konfiguracji oraz plików XML wywołuje metody odpowiednich klas.
 
 To trochę uproszczony obraz, w grę wchodzą jeszcze filtry, intrceptory, potencjalnie mogą też aspekty, jednak nie zmieniają one idei i dokładniejszym ich omówieniem zajmiemy się przy innej okazji.
+
+[Spis Treści](#spis-treści)
 
 ### 5. Co to jest model OSI i jakie ma warstwy?
 http://egzamin-e13.pl/projektowanie-lokalnych-sieci-komputerowych-2/warstwy-sieci-komputerowych-model-osi-i-tcpip
@@ -760,9 +781,10 @@ Zapewnia tłumaczenie danych, definiowanie ich formatu oraz odpowiednią składn
 
 Zapewnia aplikacjom metody dostępu do środowiska OSI. Warstwa ta świadczy usługi końcowe dla aplikacji, min.: udostępnianie zasobów (plików, drukarek). Na tym poziomie rezydują procesy sieciowe dostępne bezpośrednio dla użytkownika.
 
+[Spis Treści](#spis-treści)
+
 ### 6. Co zawiera nagłówek protokołu HTTP?
 http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
-
 
 #### Czym jest protokół HTTP
 
@@ -796,6 +818,8 @@ Poniższa tabela podsumowuje najczęściej używane nagłówki
 |Host 	|W zapytaniu jest to nagłówek obowiązkowy, informuje serwer pod jaki adres domeny chcemy wysłać zapytanie (może to być też adres IP). Pomaga to serwerom obsługującym wiele domen prawidłowo przekierowywać zapytania |	Host: www.kobietydokodu.pl
 |Accept 	|W zapytaniu klient może poinformować serwer, jakiego typu odpowiedzi akceptuje. Dzięki temu serwer może zadecydować o wysłaniu odpowiedzi np. w XML a nie JSON, co ma zastosowanie w wielu API 	|Accept: application/xml
 
+[Spis Treści](#spis-treści)
+
 ### 7. Czym różni się Http od Https ?
 https://poradnikprzedsiebiorcy.pl/-roznice-miedzy-http-a-https-i-ich-wplyw-na-pozycje-strony
 
@@ -827,9 +851,9 @@ Mimo że algorytmy Google’a dla pozycjonowania zmieniają się dość regularn
 
 Jak zapowiadają pracownicy Google’a, znaczenie algorytmu wykorzystującego protokół https ma wzrosnąć w przyszłości. Jednak specjaliści od pozycjonowania twierdzą, że istnieje wiele innych czynników, które wpływają na pozycję stron w internecie, na przykład: linki do strony, wartościowa treść czy liczba polubień na portalach społecznościowych, dzięki którym strony mogą piąć się wyżej w tym rankingu. Znaczenie protokołu https jako czynnika poprawiającego pozycję w wynikach wyszukiwania powinno być większe, jeżeli ma on być brany pod uwagę w trakcie pozycjonowania. Z tego powodu specjaliści od pozycjonowania przewidują, że mimo wprowadzonych zmian w algorytmach Google’a, przewaga stron posiadających protokół https nad tymi zarządzanymi poprzez http nie będzie się zwiększała.
 
+[Spis Treści](#spis-treści)
 
-
-do opracowania
+inspiration:
 https://github.com/tvandame/back-end-developer-interview-questions
 
 
