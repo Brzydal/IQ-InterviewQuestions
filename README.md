@@ -19,10 +19,27 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     * [Co to jest zasada KISS?](#question1.13)
     * [Co to jest API?](#question1.14)
 2. [Python](#python)
-    * [](#question2.1)
+    * [Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?](#question2.1)
+    * [Co to są dekoratory?](#question2.2)
+    * [Co to są dekoratory?](#question2.3)
+    * [Co to jest PEP8?](#question2.4)
+    * [Jakie znasz typy danych w Pythonie?](#question2.5)
+    * [Co to znaczy, że jedne zmienne są mutable, a inne immutable?](#question2.6)
+    * [Jakie znasz rodzaje metod w Pythonie?](#question2.7)
+    * [Jakie znasz rodzaje metod w Pythonie?](#question2.8)
+    * [Co to jest lambda w Pythonie i jak jej używać ?](#question2.9)
+    * [Typowanie dynamiczne vs. statyczne](#question2.10)
+    * [Jaka jest różnica między range() i xrange()?](#question2.11)
 3. [Django](#django)
+    * [Co to jest Django?](#question3.1)
+    * [Jakie znasz funkcje dostępne w Django?](#question3.2)
+    * [Opisz strukturę Django?](#question3.3)
+    * [Dlaczego warto używać Django do tworzenia stron WWW?](question3.4)
+    * [Co to są Middleware?](#question3.5)
 4. [Bazy Danych](#bazy-danych)
+    * [](#question4.1)
 5. [Internet](#internet)
+    * [](#question5.1)
 
 ## Pytania Ogólne:
 
@@ -564,7 +581,7 @@ Zasada DRY (ang. "Don't Repeat Yourself" - nie powtarzaj się) i automatyzacja m
 
 [Spis Treści](#spis-treści)
 
-### 3. Jakie znasz funkcje dostępne w Django?
+### 2. Jakie znasz funkcje dostępne w Django?
 https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 
 -    Interfejs administratora (CRUD)
@@ -577,7 +594,7 @@ https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 
 [Spis Treści](#spis-treści)
 
-### 4. Opisz strukturę Django?
+### 3. Opisz strukturę Django?
 https://docs.djangoproject.com/pl/1.11/
 
 -    Modele - opisują schemat bazy danych i strukturę danych
@@ -587,7 +604,7 @@ https://docs.djangoproject.com/pl/1.11/
 
 [Spis Treści](#spis-treści)
 
-###5.Dlaczego warto używać Django do tworzenia stron WWW?
+### 4.Dlaczego warto używać Django do tworzenia stron WWW?
 
 -    Pozwala na dzielenie modułów kodu na grupy logiczne, aby z kolei umożliwić elastyczne zmiany w przyszłości.
 -    Ułatwia zarządzanie witryną, zapewniając automatycznie generowanego administratora.
@@ -599,7 +616,7 @@ https://docs.djangoproject.com/pl/1.11/
 
 [Spis Treści](#spis-treści)
 
-### 6. Co to są Middleware?
+### 5. Co to są Middleware?
 https://pl.wikipedia.org/wiki/Oprogramowanie_po%C5%9Brednicz%C4%85ce
 
 Middleware w Django to niskopoziomowy system "wtyczek" wpływających na dane przesyłane do i z aplikacji Django. Obrazując middleware to kod, który będzie automatycznie wykonywany przed/po wykonaniu widoku, przed wysłaniem odpowiedzi do klienta (przeglądarki) itp. Django posiada zestaw gotowych skryptów middleware opisanych w jego dokumentacji, lecz oprócz nich możemy również tworzyć własne skrypty middleware. Obsługa własnych klas middleware w aplikacjach Djangopozwala operować na nadpływających do widoku żądaniach HTTP, czy wynikach zwracanych przez te widoki.
