@@ -305,6 +305,8 @@ API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiąz
 - zwracanie obiektów iterowalnych zamiast list
 - zaokrąglanie
 
+[Spis Treści](#spis-treści)
+
 ### 2. Co to są *args i **kwargs i kiedy ich używamy?
 https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/
 
@@ -346,6 +348,8 @@ np.
     f2(1,2,*t,q="winning",**d)   # 1 2 (4, 5, 6) {'a': 7, 'q': 'winning', 'c': 9, 'b': 8}
 ```
 
+[Spis Treści](#spis-treści)
+
 ### 3. Co to są dekoratory?
 http://blog.heintze.pl/tag/dekorator/
 
@@ -368,10 +372,14 @@ Przykłady dekoratorów:
 - @staticmethod,
 - @property
 
+[Spis Treści](#spis-treści)
+
 ### 4. Co to jest PEP8?
 https://www.python.org/dev/peps/pep-0008/
 
 PEP8 jest to zestaw zasad określających jak ma wyglądać kod Pythona. Określa między innymi jak duże mają być wcięcia, jak pisać komentarze, maksymalną ilość znaków w jednej linii itp.
+
+[Spis Treści](#spis-treści)
 
 ### 5. Jakie znasz typy danych w Pythonie?
 https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
@@ -389,6 +397,8 @@ https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
 |complex 	|Liczba zespolona 	|3+2.7j|
 |bool 	    |Prawda lub fałsz 	|True False|
 |type(None) |Nic (odpowiednik null) 	|None|
+
+[Spis Treści](#spis-treści)
 
 ### 6. Co to znaczy, że jedne zmienne są mutable, a inne immutable?
 https://codehabitude.com/2013/12/24/python-objects-mutable-vs-immutable/
@@ -418,6 +428,8 @@ Preview
     - set
     - bytearray
 
+    [Spis Treści](#spis-treści)
+
 ### 7. Dlaczego i kiedy używać generatorów w Pythonie?
 https://wiki.python.org/moin/Generators
 
@@ -428,6 +440,8 @@ Generator w Pythonie jest funkcją, która zwraca iterowalny obiekt. Możemy ite
 - Możemy zastąpić pętle generatorami w celu wydajnego obliczania wyników z użyciem dużych zbiorów danych.
 - Generatory są użyteczne, gdy nie chcemy otrzymać wszystkich wyników i kiedy chcemy wstrzymać iterację na jakiś czas.
 - Zamiast używać funkcji callback możemy zastąpić ją generatorem. Możemy napisać pętlę wewnątrz funkcji robi to samo co wywołanie zwrotne i przekształca ją w generator.
+
+[Spis Treści](#spis-treści)
 
 ### 8. Jakie znasz rodzaje metod w Pythonie?
 http://xion.org.pl/2011/10/03/trzy-rodzaje-metod-w-pythonie/
@@ -469,6 +483,8 @@ W celu odróżnienia od innych rodzajów, metody klasowe oznaczone są dekorator
             return cls(value)
     ```
 
+    [Spis Treści](#spis-treści)
+
 ### 9. Co to jest lambda w Pythonie i jak jej używać ?
 https://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Wyra%C5%BCenia_lambda
 
@@ -489,6 +505,8 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 (lambda x: x*2)(3)
 ```
 
+[Spis Treści](#spis-treści)
+
 ### 10. Typowanie dynamiczne vs. statyczne
 
 https://pl.wikipedia.org/wiki/Typowanie_dynamiczne
@@ -507,14 +525,15 @@ Wady:
 -    Gorsza wydajność: w przypadku języków statycznych kompilator może wykorzystać wiedzę o typach do przeprowadzenia szerokiej gamy optymizacji.  Brak dynamicznego typowania jest prawdopodobnie podstawowym powodem, dla którego języki takie jak C i Java są dużo szybsze od Pythona i Rubiego.  Zaawansowane kompilatory dla języków dynamicznych ("tracing JIT", np. V8 lub PyPy) potrafią dokonywać optymizacji typowych dla języków statycznych, jednak narzut związany ze "śledzeniem" typów wciąz pozostaje.
 -    Jak wspomniałeś: mniej błędów wychwytywanych jest już przy kompilacji.  Nawet w przypadku języków dynamicznych możliwe jest jednak stworzenie narzędzi potrafiących wyłapać większość najczęstszych błędów bez wykonywania kodu.  Jednym z takich narzędzi jest np. pylint.
 
+[Spis Treści](#spis-treści)
+
 ### 11. Jaka jest różnica między range() i xrange()?
 https://code-maven.com/range-vs-xrange-in-python
 
 Różnica polega na tym, że range() zwraca listę,a xrange() zwraca iterator, więc jest wydajniejsze.
 Od Pythona 3.0 nie ma xrange(), a range zwraca iterator.
 
-
-
+[Spis Treści](#spis-treści)
 
 ## Django
 ### 1. Co to jest Django?
