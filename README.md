@@ -318,7 +318,7 @@ API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiąz
 [Spis Treści](#spis-treści)
 
 ## Python
-### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?
+### 1. Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ? <a name="question2.1"></a>
  http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
 - funkcja print
 - dzielenie liczb całkowitych
@@ -336,7 +336,7 @@ API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiąz
 
 [Spis Treści](#spis-treści)
 
-### 2. Co to są *args i **kwargs i kiedy ich używamy?
+### 2. Co to są args i kwargs i kiedy ich używamy ? <a name="question2.2"></a>
 https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/
 
 Identyfikator *args jest używany, gdy nie jesteśmy pewni, jak wiele argumentów zostanie przekazanych do funkcji, lub jeśli chcemy przekazać listę lub krotkę argumentów do funkcji. Identyfikator ** kwargs jest używany, gdy nie wiemy, jak wiele nazwanych argumentów zostanie przekazanych do funkcji . Może być również użyty do przekazywania wartości słownika. Identyfikatory args i kwargs są konwencją, można również użyć * bob i ** billy, ale to nie byłoby mądre.
@@ -379,7 +379,7 @@ np.
 
 [Spis Treści](#spis-treści)
 
-### 3. Co to są dekoratory?
+### 3. Co to są dekoratory? <a name="question2.3"></a>
 http://blog.heintze.pl/tag/dekorator/
 
 Dekoratory sa to specjalne funkcje, które jako argument przyjmują inna funkcję i zwracają funkcję lub jako argument przyjmują klasę i zwracają klasę.
@@ -403,14 +403,14 @@ Przykłady dekoratorów:
 
 [Spis Treści](#spis-treści)
 
-### 4. Co to jest PEP8?
+### 4. Co to jest PEP8? <a name="question2.4"></a>
 https://www.python.org/dev/peps/pep-0008/
 
 PEP8 jest to zestaw zasad określających jak ma wyglądać kod Pythona. Określa między innymi jak duże mają być wcięcia, jak pisać komentarze, maksymalną ilość znaków w jednej linii itp.
 
 [Spis Treści](#spis-treści)
 
-### 5. Jakie znasz typy danych w Pythonie?
+### 5. Jakie znasz typy danych w Pythonie? <a name="question2.5"></a>
 https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
 
 |   Typ     | 	Opis        | 	Przykład    |
@@ -429,7 +429,7 @@ https://pl.wikipedia.org/wiki/Python#Typy_i_struktury_danych
 
 [Spis Treści](#spis-treści)
 
-### 6. Co to znaczy, że jedne zmienne są mutable, a inne immutable?
+### 6. Co to znaczy, że jedne zmienne są mutable, a inne immutable? <a name="question2.6"></a>
 https://codehabitude.com/2013/12/24/python-objects-mutable-vs-immutable/
 
 Nie wszystkie typy zmiennych w Pythonie reagują tak samo na zmiany. Jedne typy są mutable, czyli zmienne, a inne immutable, czyli niezmienne i zwracają raczej nowy obiekt tego samego typu, ale same pozostają takie same.
@@ -459,7 +459,7 @@ Preview
 
     [Spis Treści](#spis-treści)
 
-### 7. Dlaczego i kiedy używać generatorów w Pythonie?
+### 7. Dlaczego i kiedy używać generatorów w Pythonie? <a name="question2.7"></a>
 https://wiki.python.org/moin/Generators
 
 Generator w Pythonie jest funkcją, która zwraca iterowalny obiekt. Możemy iterować po tym obiekcie za pomocą słowa kluczowego <yield>. Ale możemy to zrobić tylko raz, ponieważ wartości zwracane przezgenerator nie są trzymane w pamięci, ale są tworzone w locie i zapominane.
@@ -472,7 +472,7 @@ Generator w Pythonie jest funkcją, która zwraca iterowalny obiekt. Możemy ite
 
 [Spis Treści](#spis-treści)
 
-### 8. Jakie znasz rodzaje metod w Pythonie?
+### 8. Jakie znasz rodzaje metod w Pythonie? <a name="question2.8"></a>
 http://xion.org.pl/2011/10/03/trzy-rodzaje-metod-w-pythonie/
 
 - Metody instancyjne - zaryzykuję stwierdzenie, że metody instancyjne są domyślnym typem, który w Pythonie jest dodatkowo zaznaczony obecnością specjalnego parametru – self – występującego zawsze jako pierwszy argument. To odpowiednik this z języków C++, C# czy Java i reprezentuje instancję obiektu, na rzecz której wywoływana jest metoda:
@@ -514,7 +514,7 @@ W celu odróżnienia od innych rodzajów, metody klasowe oznaczone są dekorator
 
     [Spis Treści](#spis-treści)
 
-### 9. Co to jest lambda w Pythonie i jak jej używać ?
+### 9. Co to jest lambda w Pythonie i jak jej używać ? <a name="question2.9"></a>
 https://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Wyra%C5%BCenia_lambda
 
 Python za pomocą pewnych wyrażeń pozwala nam zdefiniować jednolinijkowe mini-funkcje. Te tzw. funkcje lambda są zapożyczone z Lispa i mogą być użyte wszędzie tam, gdzie potrzebna jest funkcja. Lambda pobiera dowolną liczbę argumentów (włączając argumenty opcjonalne) i zwraca wartość, którą otrzymujemy po wykonaniu pojedynczego wyrażenia. Funkcje lambda nie mogą zawierać poleceń i nie mogą zawierać więcej niż jednego wyrażenia. Nie próbujmy upchać zbyt dużo w funkcję lambda; zamiast tego jeśli potrzebujemy coś bardziej złożonego.
@@ -536,7 +536,7 @@ Możemy użyć funkcji lambda bez przypisywania jej do zmiennej. Może taki spos
 
 [Spis Treści](#spis-treści)
 
-### 10. Typowanie dynamiczne vs. statyczne
+### 10. Typowanie dynamiczne vs. statyczne <a name="question2.10"></a>
 
 https://pl.wikipedia.org/wiki/Typowanie_dynamiczne
 https://pl.wikipedia.org/wiki/Typowanie_statyczne
@@ -556,7 +556,7 @@ Wady:
 
 [Spis Treści](#spis-treści)
 
-### 11. Jaka jest różnica między range() i xrange()?
+### 11. Jaka jest różnica między range() i xrange()? <a name="question2.11"></a>
 https://code-maven.com/range-vs-xrange-in-python
 
 Różnica polega na tym, że range() zwraca listę,a xrange() zwraca iterator, więc jest wydajniejsze.
