@@ -336,7 +336,7 @@ API jest ogólnie świetną sprawą, ponieważ pozwala na ujednolicenie rozwiąz
 
 [Spis Treści](#spis-treści)
 
-### 2. Co to są args i kwargs i kiedy ich używamy ? <a name="question2.2"></a>
+### 2. Co to są *args i **kwargs i kiedy ich używamy ? <a name="question2.2"></a>
 https://pythontips.com/2013/08/04/args-and-kwargs-in-python-explained/
 
 Identyfikator *args jest używany, gdy nie jesteśmy pewni, jak wiele argumentów zostanie przekazanych do funkcji, lub jeśli chcemy przekazać listę lub krotkę argumentów do funkcji. Identyfikator ** kwargs jest używany, gdy nie wiemy, jak wiele nazwanych argumentów zostanie przekazanych do funkcji . Może być również użyty do przekazywania wartości słownika. Identyfikatory args i kwargs są konwencją, można również użyć * bob i ** billy, ale to nie byłoby mądre.
