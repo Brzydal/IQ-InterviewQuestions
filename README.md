@@ -21,7 +21,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
 2. [Python](#python)
     * [Jakie są óżnice pomiędzy Pythonem 2.x i 3.x ?](#question2.1)
     * [Co to są dekoratory?](#question2.2)
-    * [Co to są dekoratory?](#question2.3)
+    * [Co *args i **kwargs i kiedy ich używamy?](#question2.3)
     * [Co to jest PEP8?](#question2.4)
     * [Jakie znasz typy danych w Pythonie?](#question2.5)
     * [Co to znaczy, że jedne zmienne są mutable, a inne immutable?](#question2.6)
