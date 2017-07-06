@@ -565,7 +565,7 @@ Od Pythona 3.0 nie ma xrange(), a range zwraca iterator.
 [Spis Treści](#spis-treści)
 
 ## Django
-### 1. Co to jest Django?
+### 1. Co to jest Django? <a name="question3.1"></a>
 http://django.pl/
 https://pl.wikipedia.org/wiki/Django_(framework)
 
@@ -581,7 +581,7 @@ Zasada DRY (ang. "Don't Repeat Yourself" - nie powtarzaj się) i automatyzacja m
 
 [Spis Treści](#spis-treści)
 
-### 2. Jakie znasz funkcje dostępne w Django?
+### 2. Jakie znasz funkcje dostępne w Django? <a name="question3.2"></a>
 https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 
 -    Interfejs administratora (CRUD)
@@ -594,7 +594,7 @@ https://pl.wikipedia.org/wiki/Django_(framework)#Cechy_Django
 
 [Spis Treści](#spis-treści)
 
-### 3. Opisz strukturę Django?
+### 3. Opisz strukturę Django? <a name="question3.3"></a>
 https://docs.djangoproject.com/pl/1.11/
 
 -    Modele - opisują schemat bazy danych i strukturę danych
@@ -604,7 +604,7 @@ https://docs.djangoproject.com/pl/1.11/
 
 [Spis Treści](#spis-treści)
 
-### 4.Dlaczego warto używać Django do tworzenia stron WWW?
+### 4.Dlaczego warto używać Django do tworzenia stron WWW? <a name="question3.4"></a>
 
 -    Pozwala na dzielenie modułów kodu na grupy logiczne, aby z kolei umożliwić elastyczne zmiany w przyszłości.
 -    Ułatwia zarządzanie witryną, zapewniając automatycznie generowanego administratora.
@@ -616,7 +616,7 @@ https://docs.djangoproject.com/pl/1.11/
 
 [Spis Treści](#spis-treści)
 
-### 5. Co to są Middleware?
+### 5. Co to są Middleware? <a name="question3.5"></a>
 https://pl.wikipedia.org/wiki/Oprogramowanie_po%C5%9Brednicz%C4%85ce
 
 Middleware w Django to niskopoziomowy system "wtyczek" wpływających na dane przesyłane do i z aplikacji Django. Obrazując middleware to kod, który będzie automatycznie wykonywany przed/po wykonaniu widoku, przed wysłaniem odpowiedzi do klienta (przeglądarki) itp. Django posiada zestaw gotowych skryptów middleware opisanych w jego dokumentacji, lecz oprócz nich możemy również tworzyć własne skrypty middleware. Obsługa własnych klas middleware w aplikacjach Djangopozwala operować na nadpływających do widoku żądaniach HTTP, czy wynikach zwracanych przez te widoki.
