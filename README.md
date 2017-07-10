@@ -716,7 +716,7 @@ http://www.teacher.webd.pl/kurs_mysql/k_2_2_3.php
 
 ## Internet
 
-### 1. Jak działa Internet?
+### 1. Jak działa Internet? <a name="question5.1"></a>
 https://www.youtube.com/watch?v=7_LPdttKXPc
 http://kobietydokodu.pl/niezbednik-juniora-jak-dziala-internet/
 
@@ -730,7 +730,7 @@ end-to-end, Internet jest otwartą platformą dla innowacji, nowych aplikacji i 
 
 [Spis Treści](#spis-treści)
 
-### 2. Jakie znasz protokoły internetowe?
+### 2. Jakie znasz protokoły internetowe? <a name="question5.2"></a>
 https://pl.wikipedia.org/wiki/Protok%C3%B3%C5%82_komunikacyjny#Protoko.C5.82y_internetowe
 
 Protokoły służące programom komputerowym do porozumiewania się między sobą poprzez Internet są określone przez IETF w dokumentach zwanych RFC.
@@ -755,7 +755,7 @@ Osobną klasą protokołów komunikacyjnych są protokoły do komunikacji grupow
 
 [Spis Treści](#spis-treści)
 
-### 3. Co to jest DNS?
+### 3. Co to jest DNS? <a name="question5.3"></a>
 https://pl.wikipedia.org/wiki/Domain_Name_System
 
 Domain Name System (DNS, pol. „system nazw domenowych”) – system serwerów, protokół komunikacyjny oraz usługa obsługująca rozproszoną bazę danych adresów sieciowych. Pozwala na zamianę adresów znanych użytkowników Internetu na adresy zrozumiałe dla urządzeń tworzących sieć komputerową. Dzięki DNS nazwa mnemoniczna, np. pl.wikipedia.org jest tłumaczona na odpowiadający jej adres IP, czyli 91.198.174.192.
@@ -764,7 +764,7 @@ DNS to złożony system komputerowy oraz prawny. Zapewnia z jednej strony rejest
 
 [Spis Treści](#spis-treści)
 
-### 4. Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres?
+### 4. Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres? <a name="question5.4"></a>
 https://youtu.be/M2wvvLmRkwo
 
 http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
@@ -786,7 +786,7 @@ To trochę uproszczony obraz, w grę wchodzą jeszcze filtry, intrceptory, poten
 
 [Spis Treści](#spis-treści)
 
-### 5. Co to jest model OSI i jakie ma warstwy?
+### 5. Co to jest model OSI i jakie ma warstwy? <a name="question5.5"></a>
 http://egzamin-e13.pl/projektowanie-lokalnych-sieci-komputerowych-2/warstwy-sieci-komputerowych-model-osi-i-tcpip
 
 Model wzorcowy ISO OSI (angielskie Open System Interconnection Reference Model), jest kompleksowy standard komunikacji sieciowej (ISO 7498). Proces komunikacji wg tego modelu został podzielony na 7 etapów, zwanych warstwami, ze względu na sposób przechodzenia informacji pomiędzy nimi. Według modelu OSI każdy protokół komunikuje się ze swoim odpowiednikiem, będącym implementacją tego samego protokołu w równorzędnej warstwie komunikacyjnej systemu odległego. Dane przekazywane są od wierzchołka stosu, poprzez kolejne warstwy, aż do warstwy fizycznej, która przesyła je poprzez sieć do odległego hosta.
@@ -821,7 +821,7 @@ Zapewnia aplikacjom metody dostępu do środowiska OSI. Warstwa ta świadczy us�
 
 [Spis Treści](#spis-treści)
 
-### 6. Co zawiera nagłówek protokołu HTTP?
+### 6. Co zawiera nagłówek protokołu HTTP? <a name="question5.6"></a>
 http://kobietydokodu.pl/niezbednik-juniora-protokol-http/
 
 #### Czym jest protokół HTTP
@@ -858,7 +858,7 @@ Poniższa tabela podsumowuje najczęściej używane nagłówki
 
 [Spis Treści](#spis-treści)
 
-### 7. Czym różni się Http od Https ?
+### 7. Czym różni się Http od Https ? <a name="question5.7"></a>
 https://poradnikprzedsiebiorcy.pl/-roznice-miedzy-http-a-https-i-ich-wplyw-na-pozycje-strony
 
 #### Protokół http
