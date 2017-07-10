@@ -42,13 +42,13 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     * [Jaka jest różnica między widokiem (View), a tabelą (Table)?](#question4.3)
     * [Jakie znasz relacje w bazach danych?](#question4.4)
 5. [Internet](#internet)
-    * [](#question5.1)
-    * [](#question5.2)
-    * [](#question5.3)
-    * [](#question5.4)
-    * [](#question5.5)
-    * [](#question5.6)
-    * [](#question5.7)
+    * [Jak działa Internet?](#question5.1)
+    * [Jakie znasz protokoły internetowe?](#question5.2)
+    * [Co to jest DNS?](#question5.3)
+    * [Co się dzieję, kiedy wpiszesz w przeglądarce jakiś adres?](#question5.4)
+    * [Co to jest model OSI i jakie ma warstwy?](#question5.5)
+    * [Co zawiera nagłówek protokołu HTTP?](#question5.6)
+    * [Czym różni się Http od Https?](#question5.7)
 
 ## Pytania Ogólne:
 
