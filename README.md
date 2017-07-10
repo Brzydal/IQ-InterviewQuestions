@@ -37,9 +37,18 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     * [Dlaczego warto używać Django do tworzenia stron WWW?](question3.4)
     * [Co to są Middleware?](#question3.5)
 4. [Bazy Danych](#bazy-danych)
-    * [](#question4.1)
+    * [Co to jest SQL?](#question4.1)
+    * [Jak i kiedy stosować indeksy w bazach danych?](#question4.2)
+    * [Jaka jest różnica między widokiem (View), a tabelą (Table)?](#question4.3)
+    * [Jakie znasz relacje w bazach danych?](#question4.4)
 5. [Internet](#internet)
     * [](#question5.1)
+    * [](#question5.2)
+    * [](#question5.3)
+    * [](#question5.4)
+    * [](#question5.5)
+    * [](#question5.6)
+    * [](#question5.7)
 
 ## Pytania Ogólne:
 
