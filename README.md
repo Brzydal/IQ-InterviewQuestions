@@ -463,7 +463,7 @@ Obiekty zmienne:
     - set
     - bytearray
 
-    [Spis Treści](#spis-treści)
+[Spis Treści](#spis-treści)
 
 ### 7. Dlaczego i kiedy używać generatorów w Pythonie? <a name="question2.7"></a>
 https://wiki.python.org/moin/Generators
