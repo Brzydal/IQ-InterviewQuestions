@@ -888,8 +888,9 @@ Jak zapowiadają pracownicy Google’a, znaczenie algorytmu wykorzystującego pr
 
 [Spis Treści](#spis-treści)
 
-inspiration:
+other interesting sources, websites etc.:
 https://github.com/tvandame/back-end-developer-interview-questions
+https://www.codewars.com/dashboard
 
 
 author @brzydal
