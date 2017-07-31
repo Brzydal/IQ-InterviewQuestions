@@ -457,9 +457,6 @@ Obiekty niezmienne:
     - bytes
 
 Obiekty zmienne:
-Markdown
-Toggle Zen Mode
-Preview
 
     - list
     - dict
