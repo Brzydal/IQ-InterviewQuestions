@@ -30,6 +30,7 @@ Pytania z różnistych rozmów kwalifikacyjnych zebrane razem dla przyszłych po
     * [Co to jest lambda w Pythonie i jak jej używać ?](#question2.9)
     * [Typowanie dynamiczne vs. statyczne](#question2.10)
     * [Jaka jest różnica między range() i xrange()?](#question2.11)
+    * [Za co odpowiada ten mechanizm zwany Global Interpreter Lock (GIL)?](#question2.12)
 3. [Django](#django)
     * [Co to jest Django?](#question3.1)
     * [Jakie znasz funkcje dostępne w Django?](#question3.2)
@@ -567,6 +568,17 @@ https://code-maven.com/range-vs-xrange-in-python
 
 Różnica polega na tym, że range() zwraca listę,a xrange() zwraca iterator, więc jest wydajniejsze.
 Od Pythona 3.0 nie ma xrange(), a range zwraca iterator.
+
+[Spis Treści](#spis-treści)
+
+### 12. Za co odpowiada ten mechanizm zwany Global Interpreter Lock (GIL)?<a name="question2.12"></a>
+https://pl.wikipedia.org/wiki/Global_Interpreter_Lock
+
+Global Interpreter Lock (GIL) – mutex podtrzymywany przez wątek interpretera języka programowania w celu uniemożliwienia współbieżnego wykonywania kodu, nieprzystosowanego do pracy w trybie wielowątkowości. Istnieje dokładnie jedna globalna blokada interpretera dla każdego procesu interpretera.
+
+Aplikacje napisane w językach używających GIL muszą używać osobnych procesów, aby w pełni wykorzystywać potencjał maszyn wieloprocesorowych (każdy proces dysponuje własną, niezależną blokadą).
+
+Dobrą analogią do globalnej blokady interpretera może być spotykana w monolitycznych jądrach systemów operacyjnych globalna blokada jądra, która realizuje niemal identyczne funkcje.
 
 [Spis Treści](#spis-treści)
 
